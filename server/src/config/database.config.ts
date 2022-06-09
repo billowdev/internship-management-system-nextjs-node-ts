@@ -1,19 +1,25 @@
-import { FastifyInstance, FastifyLoggerInstance, FastifyServerOptions } from "fastify";
-import mongoose from "mongoose"
-import config from "./config"
+import config from "./config"; // this is important!
 
-export const mongooseConfig = (app: FastifyInstance): boolean => {
-	mongoose.connect(config.mongodb.uri!);
-	let configStatus: boolean = true;
-	mongoose.connection.on('error', (err) => {
-		app.log.error(err)
-		configStatus = false
-	})
-
-	mongoose.connection.once('open', () => {
-		app.log.info('MongoDB has been connected')
-	})
-	return configStatus
-}
-
-export default mongooseConfig
+module.exports = {
+  development: {
+    username: config.database.username,
+    password: config.database.password,
+    database: config.database.dbDevelopment,
+    host: config.database.host,
+    dialect: config.database.dialect,
+  },
+  test: {
+    username: config.database.username,
+    password: config.database.password,
+    database: config.database.dbTest,
+    host: config.database.host,
+    dialect: config.database.dialect,
+  },
+  production: {
+    username: config.database.username,
+    password: config.database.password,
+    database: config.database.dbProduction,
+    host: config.database.host,
+    dialect: config.database.dialect,
+  },
+};

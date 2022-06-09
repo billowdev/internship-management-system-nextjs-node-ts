@@ -1,16 +1,19 @@
 import { FastifyInstance } from "fastify";
-import { METHODS } from "http";
-import { handleLogin, handleRefreshToken, handleRegister } from "../controllers/auth.controller";
-import { verifyToken } from "../middlewares/auth.middleware"
+import { authHandler } from "../handlers";
+import { verifyToken } from "../hooks";
+import { refreshTokenRouteSchema, loginRouteSchema, registerRouteSchema } from "./swagger-schema/auth.route.schema";
 
 const authRouter = async (app: FastifyInstance) => {
-	app.post('/login', handleLogin)
-	app.post('/register', handleRegister)
-	app.post('/refresh-token', {
-		preHandler: [
-			verifyToken
-		]
-	}, handleRefreshToken)
-}
+  app.post("/login", { schema: loginRouteSchema }, authHandler.handleLogin);
+  app.post("/register", { schema: registerRouteSchema }, authHandler.handleRegister);
+  app.post(
+    "/refresh-token",
+    {
+      preHandler: [verifyToken],
+      schema: refreshTokenRouteSchema
+    },
+    authHandler.handleRefreshToken
+  );
+};
 
-export default authRouter
+export default authRouter;

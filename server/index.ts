@@ -1,7 +1,7 @@
-import { FastifyServerOptions } from "fastify"
+import { FastifyInstance, FastifyServerOptions } from "fastify"
 import App from "./src/app"
-import mongooseConfig from "./src/config/database.config"
-import config from "./src/config/config"
+import { config } from "./src/config"
+import db from "./src/models"
 
 const options: FastifyServerOptions = {
 	logger: {
@@ -14,6 +14,12 @@ const options: FastifyServerOptions = {
 				: false
 	}
 }
-const app = App(options)
-mongooseConfig(app)
-app.listen(config.port)
+
+// Application
+const app: FastifyInstance = App(options)
+
+// serve
+const PORT: string | number = config.port
+db.sequelize.sync().then(() => {
+	app.listen(PORT)
+})

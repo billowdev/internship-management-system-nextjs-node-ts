@@ -1,5 +1,6 @@
 <h3 align="center">nodejs-app-structure-init</h3>
-
+<h4 align="center">REST API</h4>
+<br />
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -26,12 +27,12 @@
 ## About The Project
 <br />
 <!-- [![Product Name Screen Shot][product-screenshot]]() -->
-App starter REST API With Node.js Fastify MongoDB - Typescrypt
+App starter rest-api with node.js fastify sequelize postgresql redis-cache - typescript
 </p>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Structure
-#### Routes-Controllers-Servicess-Structure
+#### Routes-Handlers-Servicess-Structure
 ```
 📦nodejs-app-structure-init
  ┣ 📂src
@@ -40,29 +41,52 @@ App starter REST API With Node.js Fastify MongoDB - Typescrypt
  ┃ ┃ ┃ ┣ 📜index.ts
  ┃ ┃ ┃ ┗ 📜swagger.option.ts
  ┃ ┃ ┣ 📜config.ts
- ┃ ┃ ┗ 📜database.config.ts
- ┃ ┣ 📂controllers
- ┃ ┃ ┗ 📜auth.controller.ts
+ ┃ ┃ ┣ 📜database.config.ts
+ ┃ ┃ ┗ 📜index.ts
  ┃ ┣ 📂errors
- ┃ ┃ ┗ 📜auth.error.ts
+ ┃ ┃ ┣ 📜article.errors.ts
+ ┃ ┃ ┣ 📜auth.errors.ts
+ ┃ ┃ ┗ 📜index.ts
+ ┃ ┣ 📂handlers
+ ┃ ┃ ┣ 📜article.handler.ts
+ ┃ ┃ ┣ 📜auth.handler.ts
+ ┃ ┃ ┣ 📜index.ts
+ ┃ ┃ ┗ 📜user.handler.ts
  ┃ ┣ 📂helpers
+ ┃ ┣ 📂hooks
+ ┃ ┃ ┣ 📜auth.hook.ts
+ ┃ ┃ ┣ 📜index.ts
+ ┃ ┃ ┗ 📜protectedRoutes.hook.ts
  ┃ ┣ 📂interfaces
  ┃ ┃ ┗ 📂types
- ┃ ┃ ┃ ┣ 📂controllers
- ┃ ┃ ┃ ┃ ┗ 📜auth.types.controller.ts
- ┃ ┃ ┃ ┣ 📂middlewares
- ┃ ┃ ┃ ┃ ┗ 📜auth.types.middleware.ts
+ ┃ ┃ ┃ ┣ 📂handlers
+ ┃ ┃ ┃ ┃ ┣ 📜article.handler.types.ts
+ ┃ ┃ ┃ ┃ ┗ 📜auth.handler.types.ts
+ ┃ ┃ ┃ ┣ 📂hooks
+ ┃ ┃ ┃ ┃ ┗ 📜auth.hook.types.ts
  ┃ ┃ ┃ ┗ 📂models
- ┃ ┃ ┃ ┃ ┗ 📜Users.types.model.ts
- ┃ ┣ 📂middlewares
- ┃ ┃ ┗ 📜auth.middleware.ts
+ ┃ ┃ ┃ ┃ ┣ 📜article.model.types.ts
+ ┃ ┃ ┃ ┃ ┗ 📜user.model.types.ts
  ┃ ┣ 📂models
+ ┃ ┃ ┣ 📜article.model.ts
  ┃ ┃ ┣ 📜index.ts
  ┃ ┃ ┗ 📜users.model.ts
+ ┃ ┣ 📂redis
+ ┃ ┃ ┣ 📜index.ts
+ ┃ ┃ ┗ 📜redisClient.ts
  ┃ ┣ 📂routes
- ┃ ┃ ┗ 📜auth.route.ts
+ ┃ ┃ ┣ 📂swagger-schema
+ ┃ ┃ ┃ ┣ 📜article.route.schema.ts
+ ┃ ┃ ┃ ┣ 📜auth.route.schema.ts
+ ┃ ┃ ┃ ┗ 📜users.route.schema.ts
+ ┃ ┃ ┣ 📜article.route.ts
+ ┃ ┃ ┣ 📜auth.route.ts
+ ┃ ┃ ┣ 📜index.ts
+ ┃ ┃ ┗ 📜users.route.ts
  ┃ ┣ 📂services
- ┃ ┃ ┗ 📜users.service.ts
+ ┃ ┃ ┣ 📜article.service.ts
+ ┃ ┃ ┣ 📜index.ts
+ ┃ ┃ ┗ 📜user.service.ts
  ┃ ┣ 📂utils
  ┃ ┃ ┣ 📜custom-error.ts
  ┃ ┃ ┗ 📜logger.ts
@@ -71,22 +95,26 @@ App starter REST API With Node.js Fastify MongoDB - Typescrypt
  ┣ 📜.env
  ┣ 📜.eslintrc.ts
  ┣ 📜.gitignore
- ┣ 📜.prettierc
+ ┣ 📜.prettierrc.ts
  ┣ 📜index.ts
  ┣ 📜jest.config.ts
  ┣ 📜package-lock.json
  ┣ 📜package.json
  ┣ 📜README.md
  ┣ 📜tsconfig.json
- ┗ 📜yarn.lock
+ ┣ 📜yarn.lock
+ ┗ 📜[.]env
 ```
 
 ### Built With
 
 * [NodeJs](https://nodejs.org/)
-* [MongoDB](https://www.mongodb.com/)
+* [Sequelize](https://sequelize.org/)
+* [Postgres](https://www.postgresql.org/)
 * [Fastify](https://www.fastify.io/)
 * [Jest](https://jestjs.io/)
+* [Swagger](https://swagger.io/)
+* [Redis](https://redis.io/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -94,11 +122,11 @@ App starter REST API With Node.js Fastify MongoDB - Typescrypt
 <!-- GETTING STARTED -->
 ## Getting Started
 
-* Models - The schema definition of the Model
+* models - The schema definition of the Model
 
-* routes - The API routes maps to the Controllers
+* routes - The API routes maps to the handlers
 
-* controllers - The controllers handles all the logic behind validating request parameters, query, Sending Responses with correct codes.
+* handlers - The handlers handles all the logic behind validating request parameters, query, Sending Responses with correct codes.
 
 * services - The services contains the database queries and returning objects or throwing errors
 
@@ -120,8 +148,6 @@ App starter REST API With Node.js Fastify MongoDB - Typescrypt
 
 ### Installation
 
-
-
 1. Clone the repo
    ```sh
    git clone https://github.com/billowdev/nodejs-app-structure-init.git
@@ -131,12 +157,28 @@ App starter REST API With Node.js Fastify MongoDB - Typescrypt
    npm install
    ```
 3. Enter your ENV in `.env`
-   ```
-    PORT=
-	MONGO_URI=
-	JWT_SECRET=
-	NODE_ENV=
-   ```
+```
+  PORT=5000 | Your port
+  JWT_SECRET=YourJWTSecret
+  NODE_ENV=development
+  CLIENT_URL=localhost
+
+  REDIS_HOST=localhost
+  REDIS_PORT=6379
+  REDIS_USERNAME=default
+  REDIS_PASSWORD=REDISPASSWORD
+  REDIS_DATABASE=0
+  REDIS_BIND=0.0.0.0
+
+  DB_USERNAME= Your username for database
+  DB_PASSWORD= Your password for database
+  DB_DATABASE_DEVELOPMENT= database name for development
+  DB_DATABASE_PRODUCTION= database name for production
+  DB_DATABASE_TEST= database name for test
+  DB_HOST=localhost | your host
+  DB_DIALECT=postgres | mysql | your dialect
+
+```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
