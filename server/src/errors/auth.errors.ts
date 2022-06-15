@@ -1,6 +1,6 @@
 import { CustomErrorParams } from "../utils/custom-error";
 
-export const AuthInvalidEmail: CustomErrorParams = {
+export const AuthInvalidUsername: CustomErrorParams = {
   message: "Unauthorized",
   code: "AUTH001",
   statusCode: 401,
@@ -29,7 +29,7 @@ export const AuthRegisterFailure: CustomErrorParams = {
 };
 
 export default {
-  AuthInvalidEmail,
+  AuthInvalidUsername,
   AuthInvalidPassword,
   AuthMissingHeaders,
   AuthJWTError,

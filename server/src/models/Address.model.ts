@@ -1,5 +1,6 @@
 import { Model } from "sequelize";
 import { IAddressAttributes, addressTypeEnums } from "@/interfaces/types/models/address.model.types";
+
 module.exports = (sequelize: any, DataTypes: any) => {
 	class Address extends Model<IAddressAttributes> implements IAddressAttributes {
 		id!: string;

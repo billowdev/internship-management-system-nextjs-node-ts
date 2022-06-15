@@ -1,3 +1,6 @@
+# Internship Management System
+## Developtment by BillowDev (Akkarapon Phikulsri)
+
 <h3 align="center">nodejs-app-structure-init</h3>
 <h4 align="center">REST API</h4>
 <br />

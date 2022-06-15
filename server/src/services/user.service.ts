@@ -5,10 +5,10 @@ import customError from "../utils/custom-error";
 import { authErrors } from "../errors";
 import config from "../config/config";
 import { IAuthLoginBodyResponse } from "../interfaces/types/handlers/auth.handler.types";
-import { getChache, setCache } from "../redis";
+// import { getChache, setCache } from "../redis";
 import db from "../models";
-import logger from "../utils/logger";
 import { IUserServices } from "@/interfaces/types/services/user.service.types";
+import logger from "@/utils/logger";
 
 const passwordHashing = (password: string): string => {
   const salt = bcrypt.genSaltSync(10);
@@ -48,22 +48,22 @@ const mapUserResponseObject = (
 
 export const createUser = async (
   data: IUserServices
-): Promise<IUserAttributes> => {
+): Promise<IUserServices> => {
   data.password = passwordHashing(data.password!);
-  const user: IUserAttributes = await db.User.create(data);
+  const user: IUserServices = await db.User.create(data);
   return user;
 };
 
 export const userLogin = async (
-  email: string,
+  username: string,
   password: string
 ): Promise<IAuthLoginBodyResponse> => {
   const user = await db.User.findOne({
-    where: { email },
+    where: { username },
   });
   if (user == null) {
     customError({
-      ...authErrors.AuthInvalidEmail,
+      ...authErrors.AuthInvalidUsername,
       data: {
         success: false,
       },
@@ -83,17 +83,22 @@ export const userLogin = async (
 export const getUserById = async (
   UserId: string
 ): Promise<IAuthLoginBodyResponse> => {
-  const redisCacheKey: string = "services:getUserById";
-  const userCache: any = await getChache(redisCacheKey);
-  if (userCache) {
-    return userCache;
-  }
+
+  // docker redis | caching section
+  // const redisCacheKey: string = "services:getUserById";
+  // const userCache: any = await getChache(redisCacheKey);
+  // if (userCache) {
+  //   return userCache;
+  // }
+
   const user = await db.User.findOne({ where: { id: UserId } });
   if (user == null) {
     return customError(authErrors.AuthJWTError);
   }
   const response: IAuthLoginBodyResponse = mapUserResponseObject(UserId, user);
-  setCache(redisCacheKey, response);
+
+  // setCache(redisCacheKey, response);
+  
   return response;
 };
 

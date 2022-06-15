@@ -20,21 +20,18 @@ export const loginRouteSchema = {
 					type: 'string',
 					format: 'id'
 				},
-				email: {
+				username: {
 					type: 'string',
-					format: 'email',
 				},
 				name: {
 					type: 'string',
 					format: 'string',
 				},
-				surname: {
-					type: 'string',
-					format: 'id',
+				roles: {
+					type: "string",
 				},
-				phone: {
-					type: 'string',
-					format: 'string',
+				is_active: {
+					type: "boolean"
 				},
 				accessToken: {
 					type: 'string',
@@ -50,20 +47,10 @@ export const registerRouteSchema = {
 	body: {
 		type: 'object',
 		properties: {
-			email: {
+			username: {
 				type: 'string',
-				format:'email',
 			},
 			password: {
-				type: 'string',
-			},
-			name: {
-				type: 'string',
-			},
-			surname: {
-				type: 'string',
-			},
-			phone: {
 				type: 'string',
 			},
 		}
@@ -72,25 +59,18 @@ export const registerRouteSchema = {
 		200: {
 			type: 'object',
 			properties: {
-				email: {
+				username: {
 					type: 'string',
-					format: 'email'
 				},
 				password: {
 					type: 'string',
 					format: 'password',
 				},
-				name: {
-					type: 'string',
-					format: 'string',
+				roles: {
+					type: "string",
 				},
-				surname: {
-					type: 'string',
-					format: 'id',
-				},
-				phone: {
-					type: 'string',
-					format: 'string',
+				is_active: {
+					type: "boolean"
 				}
 			}
 		}
