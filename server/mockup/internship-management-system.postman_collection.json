@@ -1,0 +1,339 @@
+{
+	"info": {
+		"_postman_id": "4f5a3fe7-5cd6-442a-893d-5b64ea450b28",
+		"name": "internship-management-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21020441"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"2\",\r\n    \"password\":\"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/auth/login",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTUzNDY1NjQsImV4cCI6MTY1NTQ1NDU2NCwiYXVkIjoiY2EzMzM2ZGQtNmVlZC00NGI4LTgwNWItOWY3NGYzOGJlMDQ5In0.nLclRxPEolDkbRN6Gl4mUoK7hEMoDE23Zh8imrUfrzc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"2\",\r\n    \"password\":\"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/users/profile",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"2\",\r\n    \"password\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/auth/register",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "student_data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}//students/get",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"",
+								"students",
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Internships",
+			"item": [
+				{
+					"name": "get_internships_information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/internships/get/information",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"internships",
+								"get",
+								"information"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Directors",
+			"item": []
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "createLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"5\",\r\n    \"password\":\"5\",\r\n    \"permission\":\"director\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/admin/login/create",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"admin",
+								"login",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLogin-with-serch",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/admin/login/get?page=1&per_page=10&delay=1",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"admin",
+								"login",
+								"get"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "10"
+								},
+								{
+									"key": "delay",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLogin-with-sort",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/admin/login/get?page=1&per_page=10&sort_column=username&sort_direction=asc&delay=1",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"admin",
+								"login",
+								"get"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "10"
+								},
+								{
+									"key": "sort_column",
+									"value": "username"
+								},
+								{
+									"key": "sort_direction",
+									"value": "asc"
+								},
+								{
+									"key": "delay",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateLogin",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"4\",\r\n    \"password\":\"44\",\r\n    \"permission\":\"director\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/admin/login/update/c7f7128a-b2e0-4be5-9a3d-751b6b3cd8d8",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"admin",
+								"login",
+								"update",
+								"c7f7128a-b2e0-4be5-9a3d-751b6b3cd8d8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLogin",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/admin/login/delete/81e94a3c-2714-474f-8fbe-306c791fa876",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"admin",
+								"login",
+								"delete",
+								"81e94a3c-2714-474f-8fbe-306c791fa876"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "endpoint",
+			"value": "http://localhost:5000/api"
+		}
+	]
+}
