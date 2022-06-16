@@ -22,7 +22,7 @@ module.exports = (sequelize: any, DataTypes: any) => {
 				primaryKey: true
 			},
 			code: {
-				type: DataTypes.STRING(2),
+				type: DataTypes.STRING(5),
 			},
 			name_th: {
 				type: DataTypes.STRING(150),
