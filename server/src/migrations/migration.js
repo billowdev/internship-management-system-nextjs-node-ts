@@ -42,7 +42,7 @@ module.exports = {
       }
     });
 
-   
+
 
     await queryInterface.createTable('provinces', {
       id: {
@@ -50,7 +50,7 @@ module.exports = {
         primaryKey: true
       },
       code: {
-        type: Sequelize.STRING(2),
+        type: Sequelize.STRING(5),
       },
       name_th: {
         type: Sequelize.STRING(150),
@@ -66,7 +66,7 @@ module.exports = {
         primaryKey: true
       },
       code: {
-        type: Sequelize.STRING(2),
+        type: Sequelize.STRING(5),
       },
       name_th: {
         type: Sequelize.STRING(150),
@@ -82,14 +82,14 @@ module.exports = {
         }
       },
     });
-    
+
     await queryInterface.createTable('sub_districts', {
       id: {
-        type: Sequelize.STRING(5),
+        type: Sequelize.STRING(8),
         primaryKey: true
       },
       code: {
-        type: Sequelize.STRING(2),
+        type: Sequelize.STRING(6),
       },
       name_th: {
         type: Sequelize.STRING(150),
@@ -360,7 +360,7 @@ module.exports = {
         }
       },
     });
-    
+
     await queryInterface.createTable('internships', {
       id: {
         type: Sequelize.UUID,
@@ -547,6 +547,7 @@ module.exports = {
       student_id: {
         type: Sequelize.STRING(11),
         allowNull: false,
+        unique: false,
         references: {
           model: 'students',
           key: 'id'
