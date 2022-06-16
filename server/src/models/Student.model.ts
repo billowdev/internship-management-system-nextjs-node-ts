@@ -37,6 +37,9 @@ module.exports = (sequelize: any, DataTypes: any) => {
       Student.hasOne(models.ContactPerson, {
         onDelete: "cascade",
       })
+      Student.hasOne(models.Internship, {
+        onDelete: "cascade",
+      })
       Student.hasMany(models.Education, {
         onDelete: "cascade",
       });
@@ -47,8 +50,7 @@ module.exports = (sequelize: any, DataTypes: any) => {
   Student.init(
     {
       id: {
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
+        type: DataTypes.STRING(11),
         allowNull: false,
         primaryKey: true,
       },
@@ -133,11 +135,11 @@ module.exports = (sequelize: any, DataTypes: any) => {
       },
       resume_status: {
         type: DataTypes.BOOLEAN,
-        defaultValue: false
+        defaultValue: false,
       },
       is_cointernship: {
         type: DataTypes.BOOLEAN,
-        allowNull: false
+        allowNull: true
       }
     },
     {

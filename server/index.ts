@@ -1,7 +1,7 @@
 import { FastifyInstance, FastifyServerOptions } from "fastify"
 import App from "./src/app"
 import { config } from "./src/config"
-import db from "./src/models"
+import db from "./src/models/index"
 
 const options: FastifyServerOptions = {
 	logger: {

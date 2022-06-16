@@ -1,4 +1,8 @@
-import { rolesUserEnums } from "../models/user.model.types";
+import { IContactPersonAttributes } from "../models/contactPerson.model.types";
+import { IDirectorAttributes } from "../models/director.model.types";
+import { IEducationAttributes } from "../models/education.model.types";
+import { IStudentAttributes } from "../models/student.model.types";
+import { IUserAttributes, rolesUserEnums } from "../models/user.model.types";
 
 export interface IUserServices {
 	id?: string;
@@ -8,4 +12,16 @@ export interface IUserServices {
 	is_active?: boolean;
 	created_at?: Date;
 	updated_at?: Date;
+}
+
+export interface IStudentResume {
+	student?: IStudentAttributes;
+	education?: IEducationAttributes;
+	contactPerson?: IContactPersonAttributes;
+}
+
+export interface IProfileResponse {
+	studentResume?: IStudentResume;
+	director?: IDirectorAttributes;
+	user?: IUserAttributes;
 }

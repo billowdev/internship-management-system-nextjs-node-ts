@@ -8,7 +8,10 @@
     "test": "jest",
     "prettier": "prettier src/**/*.ts",
     "prettier:fix": "prettier --write src/**/*.ts",
-    "eslint:fix": "eslint --fix"
+    "eslint:fix": "eslint --fix",
+    "seed": "npx sequelize-cli db:seed:all",
+    "migrate": "npx sequelize-cli db:migrate",
+    "down": "npx sequelize-cli db:migrate:undo"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
