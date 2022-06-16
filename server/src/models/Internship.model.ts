@@ -15,9 +15,7 @@ module.exports = (sequelize: any, DataTypes: any) => {
 			});
 			Internship.belongsTo(models.Company,{foreignKey: "company_id"});
 	
-			Internship.hasMany(models.CoInternship, {
-				foreignKey: "internship_id",
-			});
+			Internship.hasMany(models.CoInternship);
 		}
 
 	}
