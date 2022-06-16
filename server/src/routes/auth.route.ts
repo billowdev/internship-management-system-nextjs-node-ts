@@ -14,6 +14,7 @@ const authRouter = async (app: FastifyInstance) => {
     },
     authHandler.handleRefreshToken
   );
+  
 };
 
 export default authRouter;

@@ -2,17 +2,17 @@ import { FastifyRequest } from "fastify";
 import { userService } from "../services";
 import {
   IAuthLoginBodyRequest,
+  IAuthLoginBodyResponse,
   IAuthRefreshTokenResponse,
   IAuthRegisterBodyRequest,
 } from "../interfaces/types/handlers/auth.handler.types";
 import { authErrors } from "../errors";
 import customError from "../utils/custom-error";
-import { IUserAttributes } from "../interfaces/types/models/user.model.types";
 import { IUserServices } from "@/interfaces/types/services/user.service.types";
 
-export const handleLogin = async (request: IAuthLoginBodyRequest) => {
+export const handleLogin = async (request: IAuthLoginBodyRequest): Promise<IAuthLoginBodyResponse> => {
   const { username, password } = request.body;
-  const login = await userService.userLogin(username, password);
+  const login: IAuthLoginBodyResponse = await userService.userLogin(username, password);
   return login;
 };
 
@@ -22,13 +22,12 @@ export const handleRegister = async (
   const { username, password } = request.body;
   const user: IUserServices = await userService
     .createUser({
-  username, password
-})
+      username, password
+    })
     .catch((err) => {
       customError(authErrors.AuthRegisterFailure);
       throw new Error();
     });
-    console.log("=== Debug=== \n", user, "\n === debug === \n")
   return user;
 };
 
@@ -40,6 +39,7 @@ export const handleRefreshToken = async (
   const response: IAuthRefreshTokenResponse = {
     accessToken,
   };
+  
   return response;
 };
 

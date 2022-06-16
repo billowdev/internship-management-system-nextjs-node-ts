@@ -133,11 +133,11 @@ module.exports = (sequelize: any, DataTypes: any) => {
       },
       resume_status: {
         type: DataTypes.BOOLEAN,
-        defaultValue: false
+        defaultValue: false,
       },
       is_cointernship: {
         type: DataTypes.BOOLEAN,
-        allowNull: false
+        allowNull: true
       }
     },
     {
