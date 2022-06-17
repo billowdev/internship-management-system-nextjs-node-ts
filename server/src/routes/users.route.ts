@@ -6,7 +6,7 @@ import { profileRouteSchema } from "./swagger-schema/users.route.schema";
 export const userRouter = async (app: FastifyInstance) => {
   app.get(
     "/profile",
-    { schema: profileRouteSchema },
+    // { schema: profileRouteSchema },
     usersHandler.handleUserProfile
   );
 

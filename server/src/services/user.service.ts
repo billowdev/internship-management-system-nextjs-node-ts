@@ -7,10 +7,12 @@ import config from "../config/config";
 import { IAuthLoginBodyResponse } from "../interfaces/types/handlers/auth.handler.types";
 // import { getChache, setCache } from "../redis";
 import db from "../models/index";
-import { IProfileResponse, IStudentResume, IUserServices } from "@/interfaces/types/services/user.service.types";
+import { IProfileResponse, IUserServices } from "@/interfaces/types/services/user.service.types";
 import { IStudentAttributes } from "@/interfaces/types/models/student.model.types";
 import { IEducationAttributes } from "@/interfaces/types/models/education.model.types";
 import { IContactPersonAttributes } from "@/interfaces/types/models/contactPerson.model.types";
+import { IHometownAddressAttributes } from "@/interfaces/types/models/hometownAddress.model.types";
+import { IAddressAttributes } from "@/interfaces/types/models/address.model.types";
 
 const passwordHashing = (password: string): string => {
   const salt = bcrypt.genSaltSync(10);
@@ -130,18 +132,37 @@ export const userLogin = async (
   return response;
 };
 
-export const getStudentResume = async (id: string): Promise<IStudentResume> => {
+// function for student profile or resume
+export const getStudentResume = async (id: string): Promise<IProfileResponse> => {
   // get student data from Student model
-  console.log("\--debug--\n", id, "\n--debug--\n")
-  const student: IStudentAttributes = await db.Student.findOne({ where: { user_id: id } });
+  const student: IStudentAttributes = await db.Student.findOne({ where: { user_id: id }, raw: true },);
+
   // get id from student (response)
   const student_id = student.id;
+  // education data
   const education: IEducationAttributes = await db.Education.findAll({ where: { student_id } })
-  const contactPerson: IContactPersonAttributes = await db.contactPerson.findAll({ where: { student_id } })
-  const response: IStudentResume = { student, education, contactPerson };
-  return response;
+  // contact person 
+  const contactPerson: IContactPersonAttributes = await db.ContactPerson.findOne({ where: { student_id } })
+  // get address by address id from hometown_address table
+  const hometownAddress: IAddressAttributes = await db.HometownAddress.findOne({ where: { student_id } }).then((resp: IHometownAddressAttributes) => {
+    return db.Address.findOne({ where: { id: resp.address_id } })
+  })
+  // get address by address id from present_address table
+  const presentAddress: IAddressAttributes = await db.PresentAddress.findOne({ where: { student_id } }).then((resp: IHometownAddressAttributes) => {
+    return db.Address.findOne({ where: { id: resp.address_id } })
+  })
+  // combine {student, education, contactPerson, hometownAddress, presentAddress }
+  const resume: IProfileResponse = { student, education, contactPerson, hometownAddress, presentAddress };
+  return resume;
 }
 
+// function for director profile
+export const getDirectorProfile = async (id: string): Promise<IProfileResponse> => {
+  const profile: IProfileResponse = await db.Director.findOne({ where: { user_id: id } })
+  return profile
+}
+
+// function for get profile
 export const getProfile = async (
   UserId: string
 ): Promise<IProfileResponse> => {
@@ -163,21 +184,17 @@ export const getProfile = async (
   const loginResponse: IAuthLoginBodyResponse = mapUserResponseObject(UserId, user);
   // destructuring {id, roles} from response of login data
   const { id, roles } = loginResponse;
-
-  let response: IProfileResponse = {};
-
-  if (roles == "student") {
-    console.log("\n\n debug \n\n", id, "\n\n debug \n\n")
-    const studentResume = getStudentResume(id)
-    Object.assign(response, studentResume)
-  } else if (roles == "director") {
-    console.log("---- user get profile role = admin ----")
-    const director = await db.Director.findOne({ where: { user_id: id } })
-    Object.assign(response, director);
+  if (roles === "student") {
+    const resume: IProfileResponse = await getStudentResume(id)
+    return resume
+  } else if (roles === "director") {
+    const director: IProfileResponse = await getDirectorProfile(id)
+    return director
+  } else {
+    const admin: IProfileResponse = { loginResponse };
+    return admin
   }
-  // console.log("\--debug--\n", response, "\n--debug--\n")
-  // setCache(redisCacheKey, response);
-  return response;
+
 };
 
 export default {

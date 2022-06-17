@@ -7,8 +7,9 @@ export const handleUserProfile = async (
   request: FastifyRequest
 ): Promise<IProfileResponse> => {
   const { UserId } = request;
-  const user: IProfileResponse = await userService.getProfile(UserId!);
-  return user;
+  const profile: IProfileResponse = await userService.getProfile(UserId!);
+  console.log("========= Debug ----", profile)
+  return profile;
 };
 
 

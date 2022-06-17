@@ -1,4 +1,5 @@
 import { IAuthLoginBodyResponse } from "../handlers/auth.handler.types";
+import { IAddressAttributes } from "../models/address.model.types";
 import { IContactPersonAttributes } from "../models/contactPerson.model.types";
 import { IDirectorAttributes } from "../models/director.model.types";
 import { IEducationAttributes } from "../models/education.model.types";
@@ -15,16 +16,13 @@ export interface IUserServices {
 	updated_at?: Date;
 }
 
-export interface IStudentResume {
+export interface IProfileResponse {
 	student?: IStudentAttributes;
 	education?: IEducationAttributes;
 	contactPerson?: IContactPersonAttributes;
-	loginResponse?: IAuthLoginBodyResponse;
+	hometownAddress?: IAddressAttributes;
+	presentAddress?: IAddressAttributes;
 	director?: IDirectorAttributes;
+	loginResponse?: IAuthLoginBodyResponse;
 }
 
-export interface IProfileResponse {
-	studentResume?: IStudentResume;
-	director?: IDirectorAttributes;
-	user?: IUserAttributes;
-}
