@@ -1,5 +1,5 @@
 # Internship Management System
-## Developtment by BillowDev (Akkarapon Phikulsri)
+## Development by BillowDev (Akkarapon Phikulsri)
 
 <h3 align="center">internship-management-system-nextjs-node-ts</h3>
 <h4 align="center">RESTFul API</h4>
