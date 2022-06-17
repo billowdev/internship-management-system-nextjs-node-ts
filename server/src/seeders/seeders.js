@@ -1,6 +1,13 @@
 'use strict';
+const bcrypt = require('bcrypt')
+const passwordHashing = (password)=> {
+  const salt = bcrypt.genSaltSync(10);
+  const hashPassword = bcrypt.hashSync(password, salt);
+  return hashPassword;
+};
 
 module.exports = {
+
   async up(queryInterface, Sequelize) {
     /**
      * Add seed commands here.
@@ -18,7 +25,7 @@ module.exports = {
         {
           id: "44d00ccd-1d7c-46e0-9bbd-6d63778889ec",
           username: '3',
-          password: '3',
+          password: passwordHashing('3'),
           is_active: true,
           roles: "student",
           created_at: new Date(),
@@ -27,7 +34,7 @@ module.exports = {
         {
           id: "44d00ccd-1d7c-46e0-9bbd-6d63778882ec",
           username: '4',
-          password: '4',
+          password: passwordHashing('4'),
           is_active: true,
           roles: "student",
           created_at: new Date(),
@@ -36,7 +43,7 @@ module.exports = {
         {
           id: "6b14e54b-26f3-4f01-ad08-35866c8438b9",
           username: '2',
-          password: '2',
+          password: passwordHashing('2'),
           is_active: true,
           roles: "director",
           created_at: new Date(),
@@ -45,7 +52,7 @@ module.exports = {
         {
           id: "6b14e54b-26f3-4f01-ad08-35866c8438b1",
           username: '1',
-          password: '1',
+          password: passwordHashing('1'),
           is_active: true,
           roles: "admin",
           created_at: new Date(),

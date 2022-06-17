@@ -11,7 +11,6 @@ import { IProfileResponse, IStudentResume, IUserServices } from "@/interfaces/ty
 import { IStudentAttributes } from "@/interfaces/types/models/student.model.types";
 import { IEducationAttributes } from "@/interfaces/types/models/education.model.types";
 import { IContactPersonAttributes } from "@/interfaces/types/models/contactPerson.model.types";
-import { AuthInvalidUsername } from "@/errors/auth.errors";
 
 const passwordHashing = (password: string): string => {
   const salt = bcrypt.genSaltSync(10);
@@ -57,13 +56,13 @@ export const createUser = async (
   if (user) {
     const role = user.roles
     if (role === "student") {
-      
+
       const username = user.username
       const student = await db.Student.create({
-        first_name: "", last_name: "", program: "", department: "", user_id: username 
+        first_name: "", last_name: "", program: "", department: "", user_id: username
       })
-      console.log("\n\n--debug--\n\n",student , "\n\n--debug\n\n")
-     
+      console.log("\n\n--debug--\n\n", student, "\n\n--debug\n\n")
+
       /*
       if (student) {
         const student_id = student.id;
@@ -159,14 +158,22 @@ export const getProfile = async (
   if (user == null) {
     return customError(authErrors.AuthJWTError);
   }
+
   // user is exist... then... check user role
   const loginResponse: IAuthLoginBodyResponse = mapUserResponseObject(UserId, user);
   // destructuring {id, roles} from response of login data
   const { id, roles } = loginResponse;
+
   let response: IProfileResponse = {};
+
   if (roles == "student") {
+    console.log("\n\n debug \n\n", id, "\n\n debug \n\n")
     const studentResume = getStudentResume(id)
     Object.assign(response, studentResume)
+  } else if (roles == "director") {
+    console.log("---- user get profile role = admin ----")
+    const director = await db.Director.findOne({ where: { user_id: id } })
+    Object.assign(response, director);
   }
   // console.log("\--debug--\n", response, "\n--debug--\n")
   // setCache(redisCacheKey, response);

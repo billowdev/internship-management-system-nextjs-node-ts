@@ -1,3 +1,4 @@
+import { IAuthLoginBodyResponse } from "../handlers/auth.handler.types";
 import { IContactPersonAttributes } from "../models/contactPerson.model.types";
 import { IDirectorAttributes } from "../models/director.model.types";
 import { IEducationAttributes } from "../models/education.model.types";
@@ -18,6 +19,8 @@ export interface IStudentResume {
 	student?: IStudentAttributes;
 	education?: IEducationAttributes;
 	contactPerson?: IContactPersonAttributes;
+	loginResponse?: IAuthLoginBodyResponse;
+	director?: IDirectorAttributes;
 }
 
 export interface IProfileResponse {
