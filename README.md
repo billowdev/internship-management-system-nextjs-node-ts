@@ -162,22 +162,6 @@ App starter rest-api with node.js fastify sequelize postgresql redis-cache - typ
 <!-- GETTING STARTED -->
 ## Getting Started
 
-* models - The schema definition of the Model
-
-* routes - The API routes maps to the handlers
-
-* handlers - The handlers handles all the logic behind validating request parameters, query, Sending Responses with correct codes.
-
-* services - The services contains the database queries and returning objects or throwing errors
-
-* interfaces/types - typescript interfaces
-
-* errors - Error type definitions
-
-* utils - Frequently used utility functions
-
-[Ref.route-controller-service-structure-for-expressjs](https://sodocumentation.net/node-js/topic/10785/route-controller-service-structure-for-expressjs)
-
 
 ### Prerequisites
 
@@ -196,29 +180,6 @@ App starter rest-api with node.js fastify sequelize postgresql redis-cache - typ
    ```sh
    npm install
    ```
-3. Enter your ENV in `.env`
-```
-  PORT=5000 | Your port
-  JWT_SECRET=YourJWTSecret
-  NODE_ENV=development
-  CLIENT_URL=localhost
-
-  REDIS_HOST=localhost
-  REDIS_PORT=6379
-  REDIS_USERNAME=default
-  REDIS_PASSWORD=REDISPASSWORD
-  REDIS_DATABASE=0
-  REDIS_BIND=0.0.0.0
-
-  DB_USERNAME= Your username for database
-  DB_PASSWORD= Your password for database
-  DB_DATABASE_DEVELOPMENT= database name for development
-  DB_DATABASE_PRODUCTION= database name for production
-  DB_DATABASE_TEST= database name for test
-  DB_HOST=localhost | your host
-  DB_DIALECT=postgres | mysql | your dialect
-
-```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
