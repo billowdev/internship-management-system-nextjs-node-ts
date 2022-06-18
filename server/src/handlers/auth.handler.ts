@@ -21,13 +21,13 @@ export const handleRegister = async (
 ): Promise<IUserServices> => {
   const { username, password } = request.body;
   const user: IUserServices = await userService
-    .createUser({
-      username, password
-    })
-    .catch((err) => {
-      customError(authErrors.AuthRegisterFailure);
-      throw new Error();
-    });
+    .createUser(
+      {username, password}
+    )
+    // .catch((err) => {
+    //   customError(authErrors.AuthRegisterFailure);
+    //   throw new Error();
+    // });
   return user;
 };
 

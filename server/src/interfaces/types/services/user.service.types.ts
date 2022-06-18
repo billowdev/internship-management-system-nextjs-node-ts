@@ -10,7 +10,7 @@ export interface IUserServices {
 	id?: string;
 	username?: string;
 	password?: string;
-	roles?: rolesUserEnums;
+	roles?: string;
 	is_active?: boolean;
 	created_at?: Date;
 	updated_at?: Date;
@@ -23,6 +23,6 @@ export interface IProfileResponse {
 	hometownAddress?: IAddressAttributes;
 	presentAddress?: IAddressAttributes;
 	director?: IDirectorAttributes;
-	loginResponse?: IAuthLoginBodyResponse;
+	admin?: IAuthLoginBodyResponse;
 }
 

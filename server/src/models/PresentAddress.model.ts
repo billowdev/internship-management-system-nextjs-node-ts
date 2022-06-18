@@ -19,8 +19,8 @@ module.exports = (sequelize: any, DataTypes: any) => {
   PresentAddress.init(
     {
       id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
         primaryKey: true
       },
       student_id: {
@@ -35,6 +35,7 @@ module.exports = (sequelize: any, DataTypes: any) => {
     {
       sequelize,
       underscored: true,
+      timestamps: false,
       modelName: "PresentAddress",
     }
   );

@@ -253,8 +253,8 @@ module.exports = {
 
     await queryInterface.createTable('hometown_addresses', {
       id: {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4,
         primaryKey: true
       },
       student_id: {
@@ -270,21 +270,13 @@ module.exports = {
           model: 'addresses',
           key: 'id'
         }
-      },
-      created_at: {
-        allowNull: false,
-        type: Sequelize.DATE,
-      },
-      updated_at: {
-        allowNull: false,
-        type: Sequelize.DATE
       },
     });
 
     await queryInterface.createTable('present_addresses', {
       id: {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4,
         primaryKey: true
       },
       student_id: {
@@ -300,14 +292,6 @@ module.exports = {
           model: 'addresses',
           key: 'id'
         }
-      },
-      created_at: {
-        allowNull: false,
-        type: Sequelize.DATE,
-      },
-      updated_at: {
-        allowNull: false,
-        type: Sequelize.DATE
       },
     });
 

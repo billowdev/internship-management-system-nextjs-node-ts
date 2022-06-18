@@ -383,18 +383,14 @@ module.exports = {
       'present_addresses',
       [
         {
-          id: "1",
+          id: "0437c3b4-38cb-4a63-b812-626b2f215a1b",
           student_id: "3",
           address_id: "168a2339-6ead-4cea-8661-681a7ac0fcfd",
-          created_at: new Date(),
-          updated_at: new Date(),
         },
         {
-          id: "2",
+          id: "0437c3b4-18cb-4a23-b852-626b2f255a1b",
           student_id: "4",
           address_id: "168a2339-6ead-4cea-8661-681a7ac0fcf1",
-          created_at: new Date(),
-          updated_at: new Date(),
         },
       ],
       {}
@@ -403,18 +399,14 @@ module.exports = {
       'hometown_addresses',
       [
         {
-          id: "1",
+          id: "0437c3b4-38cb-4a63-b321-626b2f255a1b",
           student_id: "3",
           address_id: "0437c3b4-38cb-4a63-b852-626b2f255a1b",
-          created_at: new Date(),
-          updated_at: new Date(),
         },
         {
-          id: "2",
+          id: "0437c3b4-38cb-4a63-b852-626b2f211a1b",
           student_id: "4",
           address_id: "0437c3b4-38cb-4a63-b852-626b2f255a3b",
-          created_at: new Date(),
-          updated_at: new Date(),
         },
       ],
       {}
