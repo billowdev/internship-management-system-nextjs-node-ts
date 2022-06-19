@@ -5,7 +5,7 @@ export const loginRouteSchema = {
 		properties: {
 			email: {
 				type: 'string',
-				format:'email',
+				format: 'email',
 			},
 			password: {
 				type: 'string',
@@ -59,18 +59,26 @@ export const registerRouteSchema = {
 		200: {
 			type: 'object',
 			properties: {
-				username: {
-					type: 'string',
+				"id": {
+					"type": "string"
 				},
-				password: {
-					type: 'string',
-					format: 'password',
+				"roles": {
+					"type": "string"
 				},
-				roles: {
-					type: "string",
+				"is_active": {
+					"type": "boolean"
 				},
-				is_active: {
-					type: "boolean"
+				"username": {
+					"type": "string"
+				},
+				"password": {
+					"type": "string"
+				},
+				"updatedAt": {
+					"type": "string"
+				},
+				"createdAt": {
+					"type": "string"
 				}
 			}
 		}

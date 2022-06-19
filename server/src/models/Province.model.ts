@@ -1,6 +1,6 @@
 "use strict"
 import { Model } from "sequelize"
-import { IProvinceAttributes } from "@/interfaces/types/models/province.model.types"
+import { IProvinceAttributes } from "../interfaces/types/models/province.model.types"
 
 module.exports = (sequelize: any, DataTypes: any) => {
 	class Province extends Model<IProvinceAttributes> implements IProvinceAttributes {

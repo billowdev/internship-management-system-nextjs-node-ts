@@ -21,6 +21,8 @@ export interface IStudentAttributes {
 	image: string;
 	resume_status: boolean;
 	is_cointernship: boolean;
+	present_address: string;
+    permanent_address:string;
 	created_at?: Date;
 	updated_at?: Date;
 }

@@ -8,7 +8,7 @@ import {
 } from "../interfaces/types/handlers/auth.handler.types";
 import { authErrors } from "../errors";
 import customError from "../utils/custom-error";
-import { IUserServices } from "@/interfaces/types/services/user.service.types";
+import { IUserServices } from "../interfaces/types/services/user.service.types";
 
 export const handleLogin = async (request: IAuthLoginBodyRequest): Promise<IAuthLoginBodyResponse> => {
   const { username, password } = request.body;
@@ -21,13 +21,13 @@ export const handleRegister = async (
 ): Promise<IUserServices> => {
   const { username, password } = request.body;
   const user: IUserServices = await userService
-    .createUser({
-      username, password
-    })
-    .catch((err) => {
-      customError(authErrors.AuthRegisterFailure);
-      throw new Error();
-    });
+    .createUser(
+      {username, password}
+    )
+    // .catch((err) => {
+    //   customError(authErrors.AuthRegisterFailure);
+    //   throw new Error();
+    // });
   return user;
 };
 

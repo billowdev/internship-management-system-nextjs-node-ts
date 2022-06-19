@@ -1,5 +1,4 @@
 import { FastifyInstance } from "fastify";
-import logger from "../utils/logger";
 import { verifyToken } from "./auth.hook";
 
 export const protectedRoutes = async (

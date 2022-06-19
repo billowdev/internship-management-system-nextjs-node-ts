@@ -5,7 +5,7 @@
 -- Dumped from database version 14.3
 -- Dumped by pg_dump version 14.3
 
--- Started on 2022-06-16 21:44:09
+-- Started on 2022-06-17 12:53:49
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -109,7 +109,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 209 (class 1259 OID 30214)
+-- TOC entry 209 (class 1259 OID 31087)
 -- Name: SequelizeMeta; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -121,7 +121,7 @@ CREATE TABLE public."SequelizeMeta" (
 ALTER TABLE public."SequelizeMeta" OWNER TO postgres;
 
 --
--- TOC entry 210 (class 1259 OID 30219)
+-- TOC entry 210 (class 1259 OID 31092)
 -- Name: addresses; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -143,7 +143,7 @@ CREATE TABLE public.addresses (
 ALTER TABLE public.addresses OWNER TO postgres;
 
 --
--- TOC entry 223 (class 1259 OID 30336)
+-- TOC entry 223 (class 1259 OID 31209)
 -- Name: co_internships; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -159,7 +159,7 @@ CREATE TABLE public.co_internships (
 ALTER TABLE public.co_internships OWNER TO postgres;
 
 --
--- TOC entry 222 (class 1259 OID 30335)
+-- TOC entry 222 (class 1259 OID 31208)
 -- Name: co_internships_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -184,7 +184,7 @@ ALTER SEQUENCE public.co_internships_id_seq OWNED BY public.co_internships.id;
 
 
 --
--- TOC entry 220 (class 1259 OID 30307)
+-- TOC entry 220 (class 1259 OID 31180)
 -- Name: companies; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -207,7 +207,7 @@ CREATE TABLE public.companies (
 ALTER TABLE public.companies OWNER TO postgres;
 
 --
--- TOC entry 224 (class 1259 OID 30352)
+-- TOC entry 224 (class 1259 OID 31225)
 -- Name: contact_people; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -226,7 +226,7 @@ CREATE TABLE public.contact_people (
 ALTER TABLE public.contact_people OWNER TO postgres;
 
 --
--- TOC entry 225 (class 1259 OID 30367)
+-- TOC entry 225 (class 1259 OID 31240)
 -- Name: directors; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -246,7 +246,7 @@ CREATE TABLE public.directors (
 ALTER TABLE public.directors OWNER TO postgres;
 
 --
--- TOC entry 212 (class 1259 OID 30231)
+-- TOC entry 212 (class 1259 OID 31104)
 -- Name: districts; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -262,7 +262,7 @@ CREATE TABLE public.districts (
 ALTER TABLE public.districts OWNER TO postgres;
 
 --
--- TOC entry 226 (class 1259 OID 30377)
+-- TOC entry 226 (class 1259 OID 31250)
 -- Name: education; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -280,7 +280,7 @@ CREATE TABLE public.education (
 ALTER TABLE public.education OWNER TO postgres;
 
 --
--- TOC entry 217 (class 1259 OID 30274)
+-- TOC entry 217 (class 1259 OID 31147)
 -- Name: hometown_addresses; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -296,7 +296,7 @@ CREATE TABLE public.hometown_addresses (
 ALTER TABLE public.hometown_addresses OWNER TO postgres;
 
 --
--- TOC entry 216 (class 1259 OID 30273)
+-- TOC entry 216 (class 1259 OID 31146)
 -- Name: hometown_addresses_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -321,7 +321,7 @@ ALTER SEQUENCE public.hometown_addresses_id_seq OWNED BY public.hometown_address
 
 
 --
--- TOC entry 221 (class 1259 OID 30318)
+-- TOC entry 221 (class 1259 OID 31191)
 -- Name: internships; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -339,7 +339,7 @@ CREATE TABLE public.internships (
 ALTER TABLE public.internships OWNER TO postgres;
 
 --
--- TOC entry 219 (class 1259 OID 30291)
+-- TOC entry 219 (class 1259 OID 31164)
 -- Name: present_addresses; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -355,7 +355,7 @@ CREATE TABLE public.present_addresses (
 ALTER TABLE public.present_addresses OWNER TO postgres;
 
 --
--- TOC entry 218 (class 1259 OID 30290)
+-- TOC entry 218 (class 1259 OID 31163)
 -- Name: present_addresses_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -380,7 +380,7 @@ ALTER SEQUENCE public.present_addresses_id_seq OWNED BY public.present_addresses
 
 
 --
--- TOC entry 211 (class 1259 OID 30226)
+-- TOC entry 211 (class 1259 OID 31099)
 -- Name: provinces; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -395,7 +395,7 @@ CREATE TABLE public.provinces (
 ALTER TABLE public.provinces OWNER TO postgres;
 
 --
--- TOC entry 215 (class 1259 OID 30260)
+-- TOC entry 215 (class 1259 OID 31133)
 -- Name: students; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -431,7 +431,7 @@ CREATE TABLE public.students (
 ALTER TABLE public.students OWNER TO postgres;
 
 --
--- TOC entry 213 (class 1259 OID 30241)
+-- TOC entry 213 (class 1259 OID 31114)
 -- Name: sub_districts; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -447,7 +447,7 @@ CREATE TABLE public.sub_districts (
 ALTER TABLE public.sub_districts OWNER TO postgres;
 
 --
--- TOC entry 214 (class 1259 OID 30251)
+-- TOC entry 214 (class 1259 OID 31124)
 -- Name: users; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -465,7 +465,7 @@ CREATE TABLE public.users (
 ALTER TABLE public.users OWNER TO postgres;
 
 --
--- TOC entry 3248 (class 2604 OID 30339)
+-- TOC entry 3248 (class 2604 OID 31212)
 -- Name: co_internships id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -473,7 +473,7 @@ ALTER TABLE ONLY public.co_internships ALTER COLUMN id SET DEFAULT nextval('publ
 
 
 --
--- TOC entry 3243 (class 2604 OID 30277)
+-- TOC entry 3243 (class 2604 OID 31150)
 -- Name: hometown_addresses id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -481,7 +481,7 @@ ALTER TABLE ONLY public.hometown_addresses ALTER COLUMN id SET DEFAULT nextval('
 
 
 --
--- TOC entry 3244 (class 2604 OID 30294)
+-- TOC entry 3244 (class 2604 OID 31167)
 -- Name: present_addresses id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -489,7 +489,7 @@ ALTER TABLE ONLY public.present_addresses ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
--- TOC entry 3436 (class 0 OID 30214)
+-- TOC entry 3436 (class 0 OID 31087)
 -- Dependencies: 209
 -- Data for Name: SequelizeMeta; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -498,59 +498,59 @@ INSERT INTO public."SequelizeMeta" (name) VALUES ('migration.js');
 
 
 --
--- TOC entry 3437 (class 0 OID 30219)
+-- TOC entry 3437 (class 0 OID 31092)
 -- Dependencies: 210
 -- Data for Name: addresses; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.addresses (id, house_number, road, village, sub_district, district, province, zip_code, address_type, created_at, updated_at) VALUES ('0437c3b4-38cb-4a63-b852-626b2f255a3b', '5', '2', 'Apple1', 'Apple', 'Banana', 'Mango', '4444', 'hometown', '2022-06-16 21:25:15.277+07', '2022-06-16 21:25:15.277+07');
-INSERT INTO public.addresses (id, house_number, road, village, sub_district, district, province, zip_code, address_type, created_at, updated_at) VALUES ('0437c3b4-38cb-4a63-b852-626b2f255a1b', '1', '2', 'Orange', 'Apple', 'Banana', 'Mango', '4444', 'hometown', '2022-06-16 21:25:15.277+07', '2022-06-16 21:25:15.277+07');
-INSERT INTO public.addresses (id, house_number, road, village, sub_district, district, province, zip_code, address_type, created_at, updated_at) VALUES ('168a2339-6ead-4cea-8661-681a7ac0fcfd', '2', '2', 'Orange', 'Apple', 'Banana', 'Mango', '4444', 'present', '2022-06-16 21:25:15.277+07', '2022-06-16 21:25:15.277+07');
-INSERT INTO public.addresses (id, house_number, road, village, sub_district, district, province, zip_code, address_type, created_at, updated_at) VALUES ('168a2339-6ead-4cea-8661-681a7ac0fcf1', '8', '2', 'Orange2', 'Apple2', 'Banana', 'Mango', '4444', 'present', '2022-06-16 21:25:15.277+07', '2022-06-16 21:25:15.277+07');
-INSERT INTO public.addresses (id, house_number, road, village, sub_district, district, province, zip_code, address_type, created_at, updated_at) VALUES ('1d1aa2e8-c842-4266-bbe4-fcaec6430865', '3', '3', 'Orange', 'Apple', 'Banana', 'Mango', '4444', 'company', '2022-06-16 21:25:15.277+07', '2022-06-16 21:25:15.277+07');
-INSERT INTO public.addresses (id, house_number, road, village, sub_district, district, province, zip_code, address_type, created_at, updated_at) VALUES ('a6c01b95-a4e3-4514-be98-0ab4abeba943', '4', '4', 'Orange', 'Apple', 'Banana', 'Mango', '4444', 'contact_person', '2022-06-16 21:25:15.277+07', '2022-06-16 21:25:15.277+07');
-INSERT INTO public.addresses (id, house_number, road, village, sub_district, district, province, zip_code, address_type, created_at, updated_at) VALUES ('b29cfe50-f6ae-45dc-8057-7d7e33207c9d', '45', '45', 'Orange contact_person', 'Apple contact_person', 'Banana', 'Mango', '4444', 'contact_person', '2022-06-16 21:25:15.277+07', '2022-06-16 21:25:15.277+07');
+INSERT INTO public.addresses (id, house_number, road, village, sub_district, district, province, zip_code, address_type, created_at, updated_at) VALUES ('0437c3b4-38cb-4a63-b852-626b2f255a3b', '5', '2', 'Apple1', 'Apple', 'Banana', 'Mango', '4444', 'hometown', '2022-06-17 12:43:05.651+07', '2022-06-17 12:43:05.651+07');
+INSERT INTO public.addresses (id, house_number, road, village, sub_district, district, province, zip_code, address_type, created_at, updated_at) VALUES ('0437c3b4-38cb-4a63-b852-626b2f255a1b', '1', '2', 'Orange', 'Apple', 'Banana', 'Mango', '4444', 'hometown', '2022-06-17 12:43:05.651+07', '2022-06-17 12:43:05.651+07');
+INSERT INTO public.addresses (id, house_number, road, village, sub_district, district, province, zip_code, address_type, created_at, updated_at) VALUES ('168a2339-6ead-4cea-8661-681a7ac0fcfd', '2', '2', 'Orange', 'Apple', 'Banana', 'Mango', '4444', 'present', '2022-06-17 12:43:05.651+07', '2022-06-17 12:43:05.651+07');
+INSERT INTO public.addresses (id, house_number, road, village, sub_district, district, province, zip_code, address_type, created_at, updated_at) VALUES ('168a2339-6ead-4cea-8661-681a7ac0fcf1', '8', '2', 'Orange2', 'Apple2', 'Banana', 'Mango', '4444', 'present', '2022-06-17 12:43:05.651+07', '2022-06-17 12:43:05.651+07');
+INSERT INTO public.addresses (id, house_number, road, village, sub_district, district, province, zip_code, address_type, created_at, updated_at) VALUES ('1d1aa2e8-c842-4266-bbe4-fcaec6430865', '3', '3', 'Orange', 'Apple', 'Banana', 'Mango', '4444', 'company', '2022-06-17 12:43:05.651+07', '2022-06-17 12:43:05.651+07');
+INSERT INTO public.addresses (id, house_number, road, village, sub_district, district, province, zip_code, address_type, created_at, updated_at) VALUES ('a6c01b95-a4e3-4514-be98-0ab4abeba943', '4', '4', 'Orange', 'Apple', 'Banana', 'Mango', '4444', 'contact_person', '2022-06-17 12:43:05.651+07', '2022-06-17 12:43:05.651+07');
+INSERT INTO public.addresses (id, house_number, road, village, sub_district, district, province, zip_code, address_type, created_at, updated_at) VALUES ('b29cfe50-f6ae-45dc-8057-7d7e33207c9d', '45', '45', 'Orange contact_person', 'Apple contact_person', 'Banana', 'Mango', '4444', 'contact_person', '2022-06-17 12:43:05.651+07', '2022-06-17 12:43:05.651+07');
 
 
 --
--- TOC entry 3450 (class 0 OID 30336)
+-- TOC entry 3450 (class 0 OID 31209)
 -- Dependencies: 223
 -- Data for Name: co_internships; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.co_internships (id, created_at, updated_at, internship_id, student_id) VALUES (1, '2022-06-16 21:25:15.282+07', '2022-06-16 21:25:15.282+07', '24782d4e-50a0-432c-8c1c-e56b435cd870', '4');
+INSERT INTO public.co_internships (id, created_at, updated_at, internship_id, student_id) VALUES (1, '2022-06-17 12:43:05.656+07', '2022-06-17 12:43:05.656+07', '24782d4e-50a0-432c-8c1c-e56b435cd870', '4');
 
 
 --
--- TOC entry 3447 (class 0 OID 30307)
+-- TOC entry 3447 (class 0 OID 31180)
 -- Dependencies: 220
 -- Data for Name: companies; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.companies (id, contact_person_name, contact_person_position, contact_person_phone, name, type, activities, propose_to, phone, created_at, updated_at, address_id) VALUES ('3b7e0739-132a-4d69-b0f5-8874fec97ac2', 'Akkarapon Phikulsri', 'Developer', '0938172321', 'BillowDev', 'เอกชน', 'พัฒนาซอฟต์แวร์ แอปพลิเคชัน และโซลูชันด้านไอที', 'HR', '0938271231', '2022-06-16 21:25:15.279+07', '2022-06-16 21:25:15.279+07', '1d1aa2e8-c842-4266-bbe4-fcaec6430865');
+INSERT INTO public.companies (id, contact_person_name, contact_person_position, contact_person_phone, name, type, activities, propose_to, phone, created_at, updated_at, address_id) VALUES ('3b7e0739-132a-4d69-b0f5-8874fec97ac2', 'Akkarapon Phikulsri', 'Developer', '0938172321', 'BillowDev', 'เอกชน', 'พัฒนาซอฟต์แวร์ แอปพลิเคชัน และโซลูชันด้านไอที', 'HR', '0938271231', '2022-06-17 12:43:05.653+07', '2022-06-17 12:43:05.653+07', '1d1aa2e8-c842-4266-bbe4-fcaec6430865');
 
 
 --
--- TOC entry 3451 (class 0 OID 30352)
+-- TOC entry 3451 (class 0 OID 31225)
 -- Dependencies: 224
 -- Data for Name: contact_people; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.contact_people (id, first_name, last_name, relationship, created_at, updated_at, address_id, student_id) VALUES ('5b003884-4af9-4497-93c4-bd028d7e9dd7', 'สมชาย', 'สมชาย', 'บิดา', '2022-06-16 21:25:15.283+07', '2022-06-16 21:25:15.283+07', 'a6c01b95-a4e3-4514-be98-0ab4abeba943', '3');
-INSERT INTO public.contact_people (id, first_name, last_name, relationship, created_at, updated_at, address_id, student_id) VALUES ('5e55e5c7-ebe1-4a35-b6d1-5d3b137a35ef', 'สมหมาย', 'สมหมาย', 'บิดา', '2022-06-16 21:25:15.283+07', '2022-06-16 21:25:15.283+07', 'b29cfe50-f6ae-45dc-8057-7d7e33207c9d', '4');
+INSERT INTO public.contact_people (id, first_name, last_name, relationship, created_at, updated_at, address_id, student_id) VALUES ('5b003884-4af9-4497-93c4-bd028d7e9dd7', 'สมชาย', 'สมชาย', 'บิดา', '2022-06-17 12:43:05.657+07', '2022-06-17 12:43:05.657+07', 'a6c01b95-a4e3-4514-be98-0ab4abeba943', '3');
+INSERT INTO public.contact_people (id, first_name, last_name, relationship, created_at, updated_at, address_id, student_id) VALUES ('5e55e5c7-ebe1-4a35-b6d1-5d3b137a35ef', 'สมหมาย', 'สมหมาย', 'บิดา', '2022-06-17 12:43:05.657+07', '2022-06-17 12:43:05.657+07', 'b29cfe50-f6ae-45dc-8057-7d7e33207c9d', '4');
 
 
 --
--- TOC entry 3452 (class 0 OID 30367)
+-- TOC entry 3452 (class 0 OID 31240)
 -- Dependencies: 225
 -- Data for Name: directors; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.directors (id, first_name, last_name, phone, program, department, created_at, updated_at, user_id) VALUES ('2', 'คณะกรรมการฝึกประสบการณ์', '', '0937281231', 'Computer Science', 'Facuty of Science and Technology', '2022-06-16 21:25:15.271+07', '2022-06-16 21:25:15.271+07', '6b14e54b-26f3-4f01-ad08-35866c8438b9');
+INSERT INTO public.directors (id, first_name, last_name, phone, program, department, created_at, updated_at, user_id) VALUES ('2', 'คณะกรรมการฝึกประสบการณ์', '', '0937281231', 'Computer Science', 'Facuty of Science and Technology', '2022-06-17 12:43:05.647+07', '2022-06-17 12:43:05.647+07', '6b14e54b-26f3-4f01-ad08-35866c8438b9');
 
 
 --
--- TOC entry 3439 (class 0 OID 30231)
+-- TOC entry 3439 (class 0 OID 31104)
 -- Dependencies: 212
 -- Data for Name: districts; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1556,63 +1556,56 @@ INSERT INTO public.districts (id, code, name_th, name_en, province_id) VALUES ('
 
 
 --
--- TOC entry 3453 (class 0 OID 30377)
+-- TOC entry 3453 (class 0 OID 31250)
 -- Dependencies: 226
 -- Data for Name: education; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.education (id, academy, level, gpa, created_at, updated_at, student_id) VALUES ('3c606299-0240-4a83-8d24-291042463f59', 'BillowDev Academy', 'มัธยมศึกษาตอนต้น', 3.2, '2022-06-16 21:25:15.274+07', '2022-06-16 21:25:15.274+07', '3');
-INSERT INTO public.education (id, academy, level, gpa, created_at, updated_at, student_id) VALUES ('eb4ab6a4-bc8d-4a49-81ab-5196e4108ece', 'BillowDev Academy', 'มัธยมศึกษาตอนปลาย', 4, '2022-06-16 21:25:15.274+07', '2022-06-16 21:25:15.274+07', '3');
-INSERT INTO public.education (id, academy, level, gpa, created_at, updated_at, student_id) VALUES ('f63ea72b-fe2f-498a-a9ec-70d7d107b77a', 'BillowDev University', 'ปริญญาตรี', 4, '2022-06-16 21:25:15.274+07', '2022-06-16 21:25:15.274+07', '3');
-INSERT INTO public.education (id, academy, level, gpa, created_at, updated_at, student_id) VALUES ('3c606299-0240-4a83-8d24-291042463f51', 'BillowDev Academy', 'มัธยมศึกษาตอนต้น', 3.2, '2022-06-16 21:25:15.274+07', '2022-06-16 21:25:15.274+07', '4');
-INSERT INTO public.education (id, academy, level, gpa, created_at, updated_at, student_id) VALUES ('eb4ab6a4-bc8d-4a49-81ab-5196e4103ece', 'BillowDev Academy', 'มัธยมศึกษาตอนปลาย', 4, '2022-06-16 21:25:15.274+07', '2022-06-16 21:25:15.274+07', '4');
-INSERT INTO public.education (id, academy, level, gpa, created_at, updated_at, student_id) VALUES ('f63ea72b-fe2f-498a-a9ec-70d7d101b77a', 'BillowDev University', 'ปริญญาตรี', 4, '2022-06-16 21:25:15.274+07', '2022-06-16 21:25:15.274+07', '4');
+INSERT INTO public.education (id, academy, level, gpa, created_at, updated_at, student_id) VALUES ('3c606299-0240-4a83-8d24-291042463f59', 'BillowDev Academy', 'มัธยมศึกษาตอนต้น', 3.2, '2022-06-17 12:43:05.649+07', '2022-06-17 12:43:05.649+07', '3');
+INSERT INTO public.education (id, academy, level, gpa, created_at, updated_at, student_id) VALUES ('eb4ab6a4-bc8d-4a49-81ab-5196e4108ece', 'BillowDev Academy', 'มัธยมศึกษาตอนปลาย', 4, '2022-06-17 12:43:05.649+07', '2022-06-17 12:43:05.649+07', '3');
+INSERT INTO public.education (id, academy, level, gpa, created_at, updated_at, student_id) VALUES ('f63ea72b-fe2f-498a-a9ec-70d7d107b77a', 'BillowDev University', 'ปริญญาตรี', 4, '2022-06-17 12:43:05.649+07', '2022-06-17 12:43:05.649+07', '3');
+INSERT INTO public.education (id, academy, level, gpa, created_at, updated_at, student_id) VALUES ('3c606299-0240-4a83-8d24-291042463f51', 'BillowDev Academy', 'มัธยมศึกษาตอนต้น', 3.2, '2022-06-17 12:43:05.649+07', '2022-06-17 12:43:05.649+07', '4');
+INSERT INTO public.education (id, academy, level, gpa, created_at, updated_at, student_id) VALUES ('eb4ab6a4-bc8d-4a49-81ab-5196e4103ece', 'BillowDev Academy', 'มัธยมศึกษาตอนปลาย', 4, '2022-06-17 12:43:05.649+07', '2022-06-17 12:43:05.649+07', '4');
+INSERT INTO public.education (id, academy, level, gpa, created_at, updated_at, student_id) VALUES ('f63ea72b-fe2f-498a-a9ec-70d7d101b77a', 'BillowDev University', 'ปริญญาตรี', 4, '2022-06-17 12:43:05.649+07', '2022-06-17 12:43:05.649+07', '4');
 
 
 --
--- TOC entry 3444 (class 0 OID 30274)
+-- TOC entry 3444 (class 0 OID 31147)
 -- Dependencies: 217
 -- Data for Name: hometown_addresses; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.hometown_addresses (id, student_id, address_id, created_at, updated_at) VALUES (1, '3', '0437c3b4-38cb-4a63-b852-626b2f255a1b', '2022-06-16 21:25:15.287+07', '2022-06-16 21:25:15.287+07');
-INSERT INTO public.hometown_addresses (id, student_id, address_id, created_at, updated_at) VALUES (2, '4', '0437c3b4-38cb-4a63-b852-626b2f255a3b', '2022-06-16 21:25:15.287+07', '2022-06-16 21:25:15.287+07');
+INSERT INTO public.hometown_addresses (id, student_id, address_id, created_at, updated_at) VALUES (1, '3', '0437c3b4-38cb-4a63-b852-626b2f255a1b', '2022-06-17 12:43:05.661+07', '2022-06-17 12:43:05.661+07');
+INSERT INTO public.hometown_addresses (id, student_id, address_id, created_at, updated_at) VALUES (2, '4', '0437c3b4-38cb-4a63-b852-626b2f255a3b', '2022-06-17 12:43:05.661+07', '2022-06-17 12:43:05.661+07');
 
 
 --
--- TOC entry 3448 (class 0 OID 30318)
+-- TOC entry 3448 (class 0 OID 31191)
 -- Dependencies: 221
 -- Data for Name: internships; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.internships (id, is_send, is_confirm, created_at, updated_at, student_id, company_id) VALUES ('24782d4e-50a0-432c-8c1c-e56b435cd870', true, true, '2022-06-16 21:25:15.28+07', '2022-06-16 21:25:15.28+07', '3', '3b7e0739-132a-4d69-b0f5-8874fec97ac2');
+INSERT INTO public.internships (id, is_send, is_confirm, created_at, updated_at, student_id, company_id) VALUES ('24782d4e-50a0-432c-8c1c-e56b435cd870', true, true, '2022-06-17 12:43:05.654+07', '2022-06-17 12:43:05.654+07', '3', '3b7e0739-132a-4d69-b0f5-8874fec97ac2');
 
 
 --
--- TOC entry 3446 (class 0 OID 30291)
+-- TOC entry 3446 (class 0 OID 31164)
 -- Dependencies: 219
 -- Data for Name: present_addresses; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.present_addresses (id, student_id, address_id, created_at, updated_at) VALUES (1, '3', '168a2339-6ead-4cea-8661-681a7ac0fcfd', '2022-06-16 21:25:15.285+07', '2022-06-16 21:25:15.285+07');
-INSERT INTO public.present_addresses (id, student_id, address_id, created_at, updated_at) VALUES (2, '4', '168a2339-6ead-4cea-8661-681a7ac0fcf1', '2022-06-16 21:25:15.285+07', '2022-06-16 21:25:15.285+07');
+INSERT INTO public.present_addresses (id, student_id, address_id, created_at, updated_at) VALUES (1, '3', '168a2339-6ead-4cea-8661-681a7ac0fcfd', '2022-06-17 12:43:05.659+07', '2022-06-17 12:43:05.659+07');
+INSERT INTO public.present_addresses (id, student_id, address_id, created_at, updated_at) VALUES (2, '4', '168a2339-6ead-4cea-8661-681a7ac0fcf1', '2022-06-17 12:43:05.659+07', '2022-06-17 12:43:05.659+07');
 
 
 --
--- TOC entry 3438 (class 0 OID 30226)
+-- TOC entry 3438 (class 0 OID 31099)
 -- Dependencies: 211
 -- Data for Name: provinces; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('id', 'code', 'name_th', 'name_en');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('1', '10', 'กรุงเทพมหานคร', 'Bangkok');
-INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('2', '11', 'สมุทรปราการ', 'Samut Prakan');
-INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('3', '12', 'นนทบุรี', 'Nonthaburi');
-INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('4', '13', 'ปทุมธานี', 'Pathum Thani');
-INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('5', '14', 'พระนครศรีอยุธยา', 'Phra Nakhon Si Ayutthaya');
-INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('6', '15', 'อ่างทอง', 'Ang Thong');
-INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('7', '16', 'ลพบุรี', 'Loburi');
-INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('8', '17', 'สิงห์บุรี', 'Sing Buri');
-INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('9', '18', 'ชัยนาท', 'Chai Nat');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('10', '19', 'สระบุรี', 'Saraburi');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('11', '20', 'ชลบุรี', 'Chon Buri');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('12', '21', 'ระยอง', 'Rayong');
@@ -1623,6 +1616,7 @@ INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('16', '25', '�
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('17', '26', 'นครนายก', 'Nakhon Nayok');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('18', '27', 'สระแก้ว', 'Sa Kaeo');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('19', '30', 'นครราชสีมา', 'Nakhon Ratchasima');
+INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('2', '11', 'สมุทรปราการ', 'Samut Prakan');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('20', '31', 'บุรีรัมย์', 'Buri Ram');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('21', '32', 'สุรินทร์', 'Surin');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('22', '33', 'ศรีสะเกษ', 'Si Sa Ket');
@@ -1633,6 +1627,7 @@ INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('26', '37', '�
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('27', '39', 'หนองบัวลำภู', 'Nong Bua Lam Phu');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('28', '40', 'ขอนแก่น', 'Khon Kaen');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('29', '41', 'อุดรธานี', 'Udon Thani');
+INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('3', '12', 'นนทบุรี', 'Nonthaburi');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('30', '42', 'เลย', 'Loei');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('31', '43', 'หนองคาย', 'Nong Khai');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('32', '44', 'มหาสารคาม', 'Maha Sarakham');
@@ -1643,6 +1638,7 @@ INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('36', '48', '�
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('37', '49', 'มุกดาหาร', 'Mukdahan');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('38', '50', 'เชียงใหม่', 'Chiang Mai');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('39', '51', 'ลำพูน', 'Lamphun');
+INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('4', '13', 'ปทุมธานี', 'Pathum Thani');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('40', '52', 'ลำปาง', 'Lampang');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('41', '53', 'อุตรดิตถ์', 'Uttaradit');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('42', '54', 'แพร่', 'Phrae');
@@ -1653,6 +1649,7 @@ INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('46', '58', '�
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('47', '60', 'นครสวรรค์', 'Nakhon Sawan');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('48', '61', 'อุทัยธานี', 'Uthai Thani');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('49', '62', 'กำแพงเพชร', 'Kamphaeng Phet');
+INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('5', '14', 'พระนครศรีอยุธยา', 'Phra Nakhon Si Ayutthaya');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('50', '63', 'ตาก', 'Tak');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('51', '64', 'สุโขทัย', 'Sukhothai');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('52', '65', 'พิษณุโลก', 'Phitsanulok');
@@ -1663,6 +1660,7 @@ INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('56', '71', '�
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('57', '72', 'สุพรรณบุรี', 'Suphan Buri');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('58', '73', 'นครปฐม', 'Nakhon Pathom');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('59', '74', 'สมุทรสาคร', 'Samut Sakhon');
+INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('6', '15', 'อ่างทอง', 'Ang Thong');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('60', '75', 'สมุทรสงคราม', 'Samut Songkhram');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('61', '76', 'เพชรบุรี', 'Phetchaburi');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('62', '77', 'ประจวบคีรีขันธ์', 'Prachuap Khiri Khan');
@@ -1673,6 +1671,7 @@ INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('66', '83', '�
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('67', '84', 'สุราษฎร์ธานี', 'Surat Thani');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('68', '85', 'ระนอง', 'Ranong');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('69', '86', 'ชุมพร', 'Chumphon');
+INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('7', '16', 'ลพบุรี', 'Loburi');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('70', '90', 'สงขลา', 'Songkhla');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('71', '91', 'สตูล', 'Satun');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('72', '92', 'ตรัง', 'Trang');
@@ -1681,20 +1680,22 @@ INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('74', '94', '�
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('75', '95', 'ยะลา', 'Yala');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('76', '96', 'นราธิวาส', 'Narathiwat');
 INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('77', '97', 'บึงกาฬ', 'buogkan');
+INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('8', '17', 'สิงห์บุรี', 'Sing Buri');
+INSERT INTO public.provinces (id, code, name_th, name_en) VALUES ('9', '18', 'ชัยนาท', 'Chai Nat');
 
 
 --
--- TOC entry 3442 (class 0 OID 30260)
+-- TOC entry 3442 (class 0 OID 31133)
 -- Dependencies: 215
 -- Data for Name: students; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.students (id, email, id_card, first_name, last_name, phone, program, department, skill, interest, project_topic, date_of_birth, experience, religion, father_name, father_job, mother_name, mother_job, present_gpa, image, resume_status, is_cointernship, created_at, updated_at, user_id) VALUES ('3', '3@gmail.com', '182931238273', 'Mr three', 'San', '092738167', 'computer science', 'faculty of science and technology', 'typescript', 'web developing', 'web application', '2022-06-16', 'web application development', 'buddhism', 'Mr two', 'Farmer', 'Mrs Ni', 'Farmer', 4, 'string', true, false, '2022-06-16 21:25:15.267+07', '2022-06-16 21:25:15.267+07', '44d00ccd-1d7c-46e0-9bbd-6d63778889ec');
-INSERT INTO public.students (id, email, id_card, first_name, last_name, phone, program, department, skill, interest, project_topic, date_of_birth, experience, religion, father_name, father_job, mother_name, mother_job, present_gpa, image, resume_status, is_cointernship, created_at, updated_at, user_id) VALUES ('4', '4@gmail.com', '182931238271', 'Mr four', 'yong', '0927381671', 'computer science', 'faculty of science and technology', 'typescript', 'web developing', 'web application', '2022-06-16', 'web application development', 'buddhism', 'Mr two', 'Farmer', 'Mrs Ni', 'Farmer', 3.5, 'string', true, true, '2022-06-16 21:25:15.267+07', '2022-06-16 21:25:15.267+07', '44d00ccd-1d7c-46e0-9bbd-6d63778882ec');
+INSERT INTO public.students (id, email, id_card, first_name, last_name, phone, program, department, skill, interest, project_topic, date_of_birth, experience, religion, father_name, father_job, mother_name, mother_job, present_gpa, image, resume_status, is_cointernship, created_at, updated_at, user_id) VALUES ('3', '3@gmail.com', '182931238273', 'Mr three', 'San', '092738167', 'computer science', 'faculty of science and technology', 'typescript', 'web developing', 'web application', '2022-06-17', 'web application development', 'buddhism', 'Mr two', 'Farmer', 'Mrs Ni', 'Farmer', 4, 'string', true, false, '2022-06-17 12:43:05.644+07', '2022-06-17 12:43:05.644+07', '44d00ccd-1d7c-46e0-9bbd-6d63778889ec');
+INSERT INTO public.students (id, email, id_card, first_name, last_name, phone, program, department, skill, interest, project_topic, date_of_birth, experience, religion, father_name, father_job, mother_name, mother_job, present_gpa, image, resume_status, is_cointernship, created_at, updated_at, user_id) VALUES ('4', '4@gmail.com', '182931238271', 'Mr four', 'yong', '0927381671', 'computer science', 'faculty of science and technology', 'typescript', 'web developing', 'web application', '2022-06-17', 'web application development', 'buddhism', 'Mr two', 'Farmer', 'Mrs Ni', 'Farmer', 3.5, 'string', true, true, '2022-06-17 12:43:05.644+07', '2022-06-17 12:43:05.644+07', '44d00ccd-1d7c-46e0-9bbd-6d63778882ec');
 
 
 --
--- TOC entry 3440 (class 0 OID 30241)
+-- TOC entry 3440 (class 0 OID 31114)
 -- Dependencies: 213
 -- Data for Name: sub_districts; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -10551,15 +10552,15 @@ INSERT INTO public.sub_districts (id, code, name_th, name_en, district_id) VALUE
 
 
 --
--- TOC entry 3441 (class 0 OID 30251)
+-- TOC entry 3441 (class 0 OID 31124)
 -- Dependencies: 214
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.users (id, username, password, roles, is_active, created_at, updated_at) VALUES ('44d00ccd-1d7c-46e0-9bbd-6d63778889ec', '3', '3', 'student', true, '2022-06-16 21:25:15.26+07', '2022-06-16 21:25:15.26+07');
-INSERT INTO public.users (id, username, password, roles, is_active, created_at, updated_at) VALUES ('44d00ccd-1d7c-46e0-9bbd-6d63778882ec', '4', '4', 'student', true, '2022-06-16 21:25:15.26+07', '2022-06-16 21:25:15.26+07');
-INSERT INTO public.users (id, username, password, roles, is_active, created_at, updated_at) VALUES ('6b14e54b-26f3-4f01-ad08-35866c8438b9', '2', '2', 'director', true, '2022-06-16 21:25:15.26+07', '2022-06-16 21:25:15.26+07');
-INSERT INTO public.users (id, username, password, roles, is_active, created_at, updated_at) VALUES ('6b14e54b-26f3-4f01-ad08-35866c8438b1', '1', '1', 'admin', true, '2022-06-16 21:25:15.26+07', '2022-06-16 21:25:15.26+07');
+INSERT INTO public.users (id, username, password, roles, is_active, created_at, updated_at) VALUES ('44d00ccd-1d7c-46e0-9bbd-6d63778889ec', '3', '$2b$10$mDlwP9377Ltu4ILtyD2iFOM8ngeanhZlOe0wgMz51HBkphmKQhrbK', 'student', true, '2022-06-17 12:43:05.472+07', '2022-06-17 12:43:05.472+07');
+INSERT INTO public.users (id, username, password, roles, is_active, created_at, updated_at) VALUES ('44d00ccd-1d7c-46e0-9bbd-6d63778882ec', '4', '$2b$10$So5nBWnbmqfbGXhwnEO0JOm50x5QheDSWLYqgd4L7StJR7HwQN.0K', 'student', true, '2022-06-17 12:43:05.528+07', '2022-06-17 12:43:05.528+07');
+INSERT INTO public.users (id, username, password, roles, is_active, created_at, updated_at) VALUES ('6b14e54b-26f3-4f01-ad08-35866c8438b9', '2', '$2b$10$xn7fYfkXzlEcv9yRZqMc3.RmRbSsYdPoKYL1PDHZsRecthFBwMfMe', 'director', true, '2022-06-17 12:43:05.583+07', '2022-06-17 12:43:05.583+07');
+INSERT INTO public.users (id, username, password, roles, is_active, created_at, updated_at) VALUES ('6b14e54b-26f3-4f01-ad08-35866c8438b1', '1', '$2b$10$vJSnNicYOnIBh7wPFcDfrugPkUy1jccS5PqFAedZ4LT/.vIHKSAJu', 'admin', true, '2022-06-17 12:43:05.637+07', '2022-06-17 12:43:05.637+07');
 
 
 --
@@ -10590,7 +10591,7 @@ SELECT pg_catalog.setval('public.present_addresses_id_seq', 1, false);
 
 
 --
--- TOC entry 3250 (class 2606 OID 30218)
+-- TOC entry 3250 (class 2606 OID 31091)
 -- Name: SequelizeMeta SequelizeMeta_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10599,7 +10600,7 @@ ALTER TABLE ONLY public."SequelizeMeta"
 
 
 --
--- TOC entry 3252 (class 2606 OID 30225)
+-- TOC entry 3252 (class 2606 OID 31098)
 -- Name: addresses addresses_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10608,7 +10609,7 @@ ALTER TABLE ONLY public.addresses
 
 
 --
--- TOC entry 3274 (class 2606 OID 30341)
+-- TOC entry 3274 (class 2606 OID 31214)
 -- Name: co_internships co_internships_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10617,7 +10618,7 @@ ALTER TABLE ONLY public.co_internships
 
 
 --
--- TOC entry 3270 (class 2606 OID 30312)
+-- TOC entry 3270 (class 2606 OID 31185)
 -- Name: companies companies_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10626,7 +10627,7 @@ ALTER TABLE ONLY public.companies
 
 
 --
--- TOC entry 3276 (class 2606 OID 30356)
+-- TOC entry 3276 (class 2606 OID 31229)
 -- Name: contact_people contact_people_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10635,7 +10636,7 @@ ALTER TABLE ONLY public.contact_people
 
 
 --
--- TOC entry 3278 (class 2606 OID 30371)
+-- TOC entry 3278 (class 2606 OID 31244)
 -- Name: directors directors_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10644,7 +10645,7 @@ ALTER TABLE ONLY public.directors
 
 
 --
--- TOC entry 3256 (class 2606 OID 30235)
+-- TOC entry 3256 (class 2606 OID 31108)
 -- Name: districts districts_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10653,7 +10654,7 @@ ALTER TABLE ONLY public.districts
 
 
 --
--- TOC entry 3280 (class 2606 OID 30381)
+-- TOC entry 3280 (class 2606 OID 31254)
 -- Name: education education_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10662,7 +10663,7 @@ ALTER TABLE ONLY public.education
 
 
 --
--- TOC entry 3266 (class 2606 OID 30279)
+-- TOC entry 3266 (class 2606 OID 31152)
 -- Name: hometown_addresses hometown_addresses_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10671,7 +10672,7 @@ ALTER TABLE ONLY public.hometown_addresses
 
 
 --
--- TOC entry 3272 (class 2606 OID 30324)
+-- TOC entry 3272 (class 2606 OID 31197)
 -- Name: internships internships_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10680,7 +10681,7 @@ ALTER TABLE ONLY public.internships
 
 
 --
--- TOC entry 3268 (class 2606 OID 30296)
+-- TOC entry 3268 (class 2606 OID 31169)
 -- Name: present_addresses present_addresses_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10689,7 +10690,7 @@ ALTER TABLE ONLY public.present_addresses
 
 
 --
--- TOC entry 3254 (class 2606 OID 30230)
+-- TOC entry 3254 (class 2606 OID 31103)
 -- Name: provinces provinces_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10698,7 +10699,7 @@ ALTER TABLE ONLY public.provinces
 
 
 --
--- TOC entry 3264 (class 2606 OID 30267)
+-- TOC entry 3264 (class 2606 OID 31140)
 -- Name: students students_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10707,7 +10708,7 @@ ALTER TABLE ONLY public.students
 
 
 --
--- TOC entry 3258 (class 2606 OID 30389)
+-- TOC entry 3258 (class 2606 OID 31118)
 -- Name: sub_districts sub_districts_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10716,7 +10717,7 @@ ALTER TABLE ONLY public.sub_districts
 
 
 --
--- TOC entry 3260 (class 2606 OID 30257)
+-- TOC entry 3260 (class 2606 OID 31130)
 -- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10725,7 +10726,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- TOC entry 3262 (class 2606 OID 30259)
+-- TOC entry 3262 (class 2606 OID 31132)
 -- Name: users users_username_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10734,7 +10735,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- TOC entry 3291 (class 2606 OID 30342)
+-- TOC entry 3291 (class 2606 OID 31215)
 -- Name: co_internships co_internships_internship_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10743,7 +10744,7 @@ ALTER TABLE ONLY public.co_internships
 
 
 --
--- TOC entry 3292 (class 2606 OID 30347)
+-- TOC entry 3292 (class 2606 OID 31220)
 -- Name: co_internships co_internships_student_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10752,7 +10753,7 @@ ALTER TABLE ONLY public.co_internships
 
 
 --
--- TOC entry 3288 (class 2606 OID 30313)
+-- TOC entry 3288 (class 2606 OID 31186)
 -- Name: companies companies_address_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10761,7 +10762,7 @@ ALTER TABLE ONLY public.companies
 
 
 --
--- TOC entry 3293 (class 2606 OID 30357)
+-- TOC entry 3293 (class 2606 OID 31230)
 -- Name: contact_people contact_people_address_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10770,7 +10771,7 @@ ALTER TABLE ONLY public.contact_people
 
 
 --
--- TOC entry 3294 (class 2606 OID 30362)
+-- TOC entry 3294 (class 2606 OID 31235)
 -- Name: contact_people contact_people_student_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10779,7 +10780,7 @@ ALTER TABLE ONLY public.contact_people
 
 
 --
--- TOC entry 3295 (class 2606 OID 30372)
+-- TOC entry 3295 (class 2606 OID 31245)
 -- Name: directors directors_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10788,7 +10789,7 @@ ALTER TABLE ONLY public.directors
 
 
 --
--- TOC entry 3281 (class 2606 OID 30236)
+-- TOC entry 3281 (class 2606 OID 31109)
 -- Name: districts districts_province_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10797,7 +10798,7 @@ ALTER TABLE ONLY public.districts
 
 
 --
--- TOC entry 3296 (class 2606 OID 30382)
+-- TOC entry 3296 (class 2606 OID 31255)
 -- Name: education education_student_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10806,7 +10807,7 @@ ALTER TABLE ONLY public.education
 
 
 --
--- TOC entry 3285 (class 2606 OID 30285)
+-- TOC entry 3285 (class 2606 OID 31158)
 -- Name: hometown_addresses hometown_addresses_address_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10815,7 +10816,7 @@ ALTER TABLE ONLY public.hometown_addresses
 
 
 --
--- TOC entry 3284 (class 2606 OID 30280)
+-- TOC entry 3284 (class 2606 OID 31153)
 -- Name: hometown_addresses hometown_addresses_student_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10824,7 +10825,7 @@ ALTER TABLE ONLY public.hometown_addresses
 
 
 --
--- TOC entry 3290 (class 2606 OID 30330)
+-- TOC entry 3290 (class 2606 OID 31203)
 -- Name: internships internships_company_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10833,7 +10834,7 @@ ALTER TABLE ONLY public.internships
 
 
 --
--- TOC entry 3289 (class 2606 OID 30325)
+-- TOC entry 3289 (class 2606 OID 31198)
 -- Name: internships internships_student_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10842,7 +10843,7 @@ ALTER TABLE ONLY public.internships
 
 
 --
--- TOC entry 3287 (class 2606 OID 30302)
+-- TOC entry 3287 (class 2606 OID 31175)
 -- Name: present_addresses present_addresses_address_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10851,7 +10852,7 @@ ALTER TABLE ONLY public.present_addresses
 
 
 --
--- TOC entry 3286 (class 2606 OID 30297)
+-- TOC entry 3286 (class 2606 OID 31170)
 -- Name: present_addresses present_addresses_student_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10860,7 +10861,7 @@ ALTER TABLE ONLY public.present_addresses
 
 
 --
--- TOC entry 3283 (class 2606 OID 30268)
+-- TOC entry 3283 (class 2606 OID 31141)
 -- Name: students students_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10869,7 +10870,7 @@ ALTER TABLE ONLY public.students
 
 
 --
--- TOC entry 3282 (class 2606 OID 30246)
+-- TOC entry 3282 (class 2606 OID 31119)
 -- Name: sub_districts sub_districts_district_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -10877,7 +10878,7 @@ ALTER TABLE ONLY public.sub_districts
     ADD CONSTRAINT sub_districts_district_id_fkey FOREIGN KEY (district_id) REFERENCES public.districts(id);
 
 
--- Completed on 2022-06-16 21:44:09
+-- Completed on 2022-06-17 12:53:49
 
 --
 -- PostgreSQL database dump complete

@@ -1,5 +1,5 @@
 # Internship Management System
-## Developtment by BillowDev (Akkarapon Phikulsri)
+## Development by BillowDev (Akkarapon Phikulsri)
 
 <h3 align="center">internship-management-system-nextjs-node-ts</h3>
 <h4 align="center">RESTFul API</h4>
@@ -37,113 +37,37 @@ App starter rest-api with node.js fastify sequelize postgresql redis-cache - typ
 ### Structure
 #### Routes-Handlers-Servicess-Structure
 ```
-📦server
- ┣ 📂database
- ┃ ┣ 📂thai_address_csv
- ┃ ┃ ┣ 📜districts.csv
- ┃ ┃ ┣ 📜provinces.csv
- ┃ ┃ ┗ 📜sub_districts.csv
- ┃ ┣ 📜internship_management_system_db.sql
- ┃ ┣ 📜internship_management_system_db.tar
- ┃ ┣ 📜tb_districts.sql
- ┃ ┣ 📜tb_provinces.sql
- ┃ ┗ 📜tb_sub_districts.sql
- ┣ 📂mockup
- ┃ ┗ 📜internship-management-system.postman_collection.json
- ┣ 📂src
- ┃ ┣ 📂config
- ┃ ┃ ┣ 📂swagger
- ┃ ┃ ┃ ┣ 📜index.ts
- ┃ ┃ ┃ ┗ 📜swagger.option.ts
- ┃ ┃ ┣ 📜config.ts
- ┃ ┃ ┣ 📜database.config.js
- ┃ ┃ ┗ 📜index.ts
- ┃ ┣ 📂errors
- ┃ ┃ ┣ 📜article.errors.ts
- ┃ ┃ ┣ 📜auth.errors.ts
- ┃ ┃ ┗ 📜index.ts
- ┃ ┣ 📂handlers
- ┃ ┃ ┣ 📜auth.handler.ts
- ┃ ┃ ┣ 📜index.ts
- ┃ ┃ ┗ 📜user.handler.ts
- ┃ ┣ 📂hooks
- ┃ ┃ ┣ 📜auth.hook.ts
- ┃ ┃ ┣ 📜index.ts
- ┃ ┃ ┗ 📜protectedRoutes.hook.ts
- ┃ ┣ 📂interfaces
- ┃ ┃ ┗ 📂types
- ┃ ┃ ┃ ┣ 📂handlers
- ┃ ┃ ┃ ┃ ┗ 📜auth.handler.types.ts
- ┃ ┃ ┃ ┣ 📂hooks
- ┃ ┃ ┃ ┃ ┗ 📜auth.hook.types.ts
- ┃ ┃ ┃ ┣ 📂models
- ┃ ┃ ┃ ┃ ┣ 📜address.model.types.ts
- ┃ ┃ ┃ ┃ ┣ 📜coInternship.model.types.ts
- ┃ ┃ ┃ ┃ ┣ 📜company.model.type.ts
- ┃ ┃ ┃ ┃ ┣ 📜contactPerson.model.types.ts
- ┃ ┃ ┃ ┃ ┣ 📜director.model.types.ts
- ┃ ┃ ┃ ┃ ┣ 📜district.model.types.ts
- ┃ ┃ ┃ ┃ ┣ 📜education.model.types.ts
- ┃ ┃ ┃ ┃ ┣ 📜hometownAddress.model.types.ts
- ┃ ┃ ┃ ┃ ┣ 📜internship.model.types.ts
- ┃ ┃ ┃ ┃ ┣ 📜presentAddress.model.types.ts
- ┃ ┃ ┃ ┃ ┣ 📜province.model.types.ts
- ┃ ┃ ┃ ┃ ┣ 📜student.model.types.ts
- ┃ ┃ ┃ ┃ ┣ 📜subDistrict.model.types.ts
- ┃ ┃ ┃ ┃ ┗ 📜user.model.types.ts
- ┃ ┃ ┃ ┗ 📂services
- ┃ ┃ ┃ ┃ ┗ 📜user.service.types.ts
- ┃ ┣ 📂migrations
- ┃ ┃ ┗ 📜migration.js
- ┃ ┣ 📂models
- ┃ ┃ ┣ 📜Address.model.ts
- ┃ ┃ ┣ 📜CoInternship.model.ts
- ┃ ┃ ┣ 📜Company.model.ts
- ┃ ┃ ┣ 📜ContactPerson.model.ts
- ┃ ┃ ┣ 📜Director.model.ts
- ┃ ┃ ┣ 📜District.model.ts
- ┃ ┃ ┣ 📜Education.model.ts
- ┃ ┃ ┣ 📜HometownAddress.model.ts
- ┃ ┃ ┣ 📜index.ts
- ┃ ┃ ┣ 📜Internship.model.ts
- ┃ ┃ ┣ 📜PresentAddress.model.ts
- ┃ ┃ ┣ 📜Province.model.ts
- ┃ ┃ ┣ 📜Student.model.ts
- ┃ ┃ ┣ 📜SubDistrict.model.ts
- ┃ ┃ ┗ 📜User.model.ts
- ┃ ┣ 📂redis
- ┃ ┃ ┣ 📜index.ts
- ┃ ┃ ┗ 📜redisClient.ts
- ┃ ┣ 📂routes
- ┃ ┃ ┣ 📂swagger-schema
- ┃ ┃ ┃ ┣ 📜article.route.schema.ts
- ┃ ┃ ┃ ┣ 📜auth.route.schema.ts
- ┃ ┃ ┃ ┗ 📜users.route.schema.ts
- ┃ ┃ ┣ 📜auth.route.ts
- ┃ ┃ ┣ 📜index.ts
- ┃ ┃ ┗ 📜users.route.ts
- ┃ ┣ 📂seeders
- ┃ ┃ ┗ 📜seeders.js
- ┃ ┣ 📂services
- ┃ ┃ ┣ 📜index.ts
- ┃ ┃ ┗ 📜user.service.ts
- ┃ ┣ 📂utils
- ┃ ┃ ┣ 📜custom-error.ts
- ┃ ┃ ┗ 📜logger.ts
- ┃ ┣ 📜app.spec.ts
- ┃ ┗ 📜app.ts
- ┣ 📜.eslintrc.ts
- ┣ 📜.gitignore
- ┣ 📜.prettierrc.ts
- ┣ 📜.sequelizerc
- ┣ 📜index.ts
- ┣ 📜jest.config.ts
- ┣ 📜package-lock.json
- ┣ 📜package.json
- ┣ 📜README.md
- ┣ 📜tsconfig.json
- ┣ 📜yarn.lock
- ┗ 📜[.]env
+internship-management-system-nextjs-node-ts
+├───client
+│   ├───pages
+│   │   └───api
+│   ├───public
+│   └───styles
+└───server
+    ├───database
+    │   ├───ims
+    │   └───thai_address
+    ├───mockup
+    └───src
+        ├───config
+        │   └───swagger
+        ├───errors
+        ├───handlers
+        ├───hooks
+        ├───interfaces
+        │   └───types
+        │       ├───handlers
+        │       ├───hooks
+        │       ├───models
+        │       └───services
+        ├───migrations
+        ├───models
+        ├───redis
+        ├───routes
+        │   └───swagger-schema
+        ├───seeders
+        ├───services
+        └───utils
 ```
 
 ### Built With

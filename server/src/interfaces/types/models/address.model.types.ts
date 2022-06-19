@@ -1,5 +1,5 @@
 export enum addressTypeEnums {
-	Hometown = "hometown",
+	Permanent = "permanent",
 	Present = "present",
 	Company = "company",
 	ContactPerson = "contact_person"

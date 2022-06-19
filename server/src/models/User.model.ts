@@ -1,7 +1,7 @@
 "use strict";
 
 import { Model } from "sequelize";
-import { IUserAttributes, rolesUserEnums } from "@/interfaces/types/models/user.model.types";
+import { IUserAttributes, rolesUserEnums } from "../interfaces/types/models/user.model.types";
 
 
 module.exports = (sequelize: any, DataTypes: any) => {

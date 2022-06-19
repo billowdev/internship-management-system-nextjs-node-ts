@@ -9,9 +9,10 @@
     "prettier": "prettier src/**/*.ts",
     "prettier:fix": "prettier --write src/**/*.ts",
     "eslint:fix": "eslint --fix",
-    "seed": "npx sequelize-cli db:seed:all",
-    "migrate": "npx sequelize-cli db:migrate",
-    "down": "npx sequelize-cli db:migrate:undo"
+    "seed:all": "npx sequelize-cli db:seed:all",
+    "migrate:up": "npx sequelize-cli db:migrate",
+    "migrate:down": "npx sequelize-cli db:migrate:undo",
+    "seed:change": "npm run migrate:down && npm run migrate:up && npm run seed:all"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",

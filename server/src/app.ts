@@ -1,7 +1,7 @@
 import fastify, { FastifyRequest, FastifyServerOptions } from "fastify";
 import fastifySwagger from "@fastify/swagger";
 import { config } from "./config";
-import { userRouter, authRouter } from "./routes";
+import { userRouter, authRouter, internshipRouter } from "./routes";
 import { CustomError } from "./utils/custom-error";
 import { swaggerOption } from "./config/swagger";
 
@@ -37,6 +37,7 @@ const App = (options: FastifyServerOptions) => {
 
   app.register(authRouter, { prefix: "/api/auth" });
   app.register(userRouter, { prefix: "/api/users" });
+  app.register(internshipRouter, { prefix: "/api/internship" })
 
   app.setErrorHandler((err, req, res) => {
     const customError: CustomError = err;

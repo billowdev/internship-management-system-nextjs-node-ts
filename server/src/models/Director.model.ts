@@ -1,7 +1,7 @@
 "use strict";
 
 import { Model } from "sequelize";
-import { IDirectorAttributes } from "@/interfaces/types/models/director.model.types";
+import { IDirectorAttributes } from "../interfaces/types/models/director.model.types";
 
 
 module.exports = (sequelize: any, DataTypes: any) => {
