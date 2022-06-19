@@ -403,6 +403,5 @@ module.exports = {
     await queryInterface.bulkDelete('internships', null, bulkDeleteOptions);
     await queryInterface.bulkDelete('co_internships', null, bulkDeleteOptions);
     await queryInterface.bulkDelete('addresses', null, bulkDeleteOptions);
-    await queryInterface.bulkDelete('student_addresses', null, bulkDeleteOptions);
   }
 };

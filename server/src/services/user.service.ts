@@ -6,13 +6,13 @@ import config from "../config/config";
 import { IAuthLoginBodyResponse, IAuthRegisterBodyRequest } from "../interfaces/types/handlers/auth.handler.types";
 // import { getChache, setCache } from "../redis";
 import db from "../models/index";
-import { IProfileResponse, IUserServices } from "@/interfaces/types/services/user.service.types";
-import { IStudentAttributes } from "@/interfaces/types/models/student.model.types";
-import { IEducationAttributes } from "@/interfaces/types/models/education.model.types";
-import { IContactPersonAttributes } from "@/interfaces/types/models/contactPerson.model.types";
-import { IDirectorAttributes } from "@/interfaces/types/models/director.model.types";
-import { IUserAttributes } from "@/interfaces/types/models/user.model.types";
-import { IAddressAttributes } from "@/interfaces/types/models/address.model.types";
+import { IProfileResponse, IUserServices } from "../interfaces/types/services/user.service.types";
+import { IStudentAttributes } from "../interfaces/types/models/student.model.types";
+import { IEducationAttributes } from "../interfaces/types/models/education.model.types";
+import { IContactPersonAttributes } from "../interfaces/types/models/contactPerson.model.types";
+import { IDirectorAttributes } from "../interfaces/types/models/director.model.types";
+import { IUserAttributes } from "../interfaces/types/models/user.model.types";
+import { IAddressAttributes } from "../interfaces/types/models/address.model.types";
 
 const passwordHashing = (password: string): string => {
   const salt = bcrypt.genSaltSync(10);
@@ -136,7 +136,7 @@ export const studentResume = async (id: string): Promise<IProfileResponse> => {
   const contactPerson: IContactPersonAttributes = await db.ContactPerson.findOne({ where: { student_id } })
   // get address by address id from hometown_address table
 
-  // get address by address id from present_address table
+  // get address by address id from address
   const presentAddress: IAddressAttributes = await db.Address.findOne({ where: { id: student.present_address, address_type: "present" } })
   const permanentAddress: IAddressAttributes = await db.Address.findOne({ where: { id: student.permanent_address, address_type: "permanent" } })
 

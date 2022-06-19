@@ -1,6 +1,5 @@
-import { IProfileResponse } from "@/interfaces/types/services/user.service.types";
+import { IProfileResponse } from "../interfaces/types/services/user.service.types";
 import { FastifyRequest } from "fastify";
-import { IAuthLoginBodyResponse } from "../interfaces/types/handlers/auth.handler.types";
 import { userService } from "../services";
 
 export const handleUserProfile = async (

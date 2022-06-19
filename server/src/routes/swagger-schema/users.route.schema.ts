@@ -163,8 +163,8 @@ export const profileRouteSchema = {
 						}
 					},
 				},
-				"hometownAddress": {
-					"hometownAddress": {
+				"permanentAddress": {
+					"permanentAddress": {
 						"type": "object",
 						"properties": {
 							"id": {

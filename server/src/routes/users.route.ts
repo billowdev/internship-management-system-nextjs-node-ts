@@ -1,13 +1,13 @@
 import { FastifyInstance } from "fastify";
-import { usersHandler } from "../handlers";
-import { protectedRoutes } from "../hooks";
+import { userHandler } from "../handlers";
+import { protectedRoutes } from "../hooks/protectedRoutes.hook";
 import { profileRouteSchema } from "./swagger-schema/users.route.schema";
 
 export const userRouter = async (app: FastifyInstance) => {
   app.get(
     "/profile",
-    // { schema: profileRouteSchema },
-    usersHandler.handleUserProfile
+    { schema: profileRouteSchema },
+    userHandler.handleUserProfile
   );
 
   // routes want to protect

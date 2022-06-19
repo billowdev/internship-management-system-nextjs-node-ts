@@ -1,6 +1,6 @@
 "use strict"
 import { Model } from "sequelize"
-import { ICompanyAttributes } from "@/interfaces/types/models/company.model.type"
+import { ICompanyAttributes } from "../interfaces/types/models/company.model.type"
 
 module.exports = (sequelize: any, DataTypes: any) => {
 	class Company extends Model<ICompanyAttributes> implements ICompanyAttributes {

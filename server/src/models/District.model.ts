@@ -1,6 +1,6 @@
 "use strict"
 import { Model } from "sequelize"
-import { IDistrictAttributes } from "@/interfaces/types/models/district.model.types"
+import { IDistrictAttributes } from "../interfaces/types/models/district.model.types"
 
 module.exports = (sequelize: any, DataTypes: any) => {
 	class District extends Model<IDistrictAttributes> implements IDistrictAttributes {

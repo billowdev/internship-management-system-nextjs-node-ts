@@ -1,6 +1,6 @@
 "use strict";
 import { Model } from "sequelize";
-import { IContactPersonAttributes } from "@/interfaces/types/models/contactPerson.model.types"
+import { IContactPersonAttributes } from "../interfaces/types/models/contactPerson.model.types"
 
 module.exports = (sequelize: any, DataTypes: any) => {
   class ContactPerson extends Model<IContactPersonAttributes> implements IContactPersonAttributes {
