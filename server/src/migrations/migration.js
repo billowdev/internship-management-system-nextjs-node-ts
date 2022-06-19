@@ -30,7 +30,7 @@ module.exports = {
         type: Sequelize.STRING(10),
       },
       address_type: {
-        type: Sequelize.ENUM(["hometown", "present", "company", "contact_person"])
+        type: Sequelize.ENUM(["permanent", "present", "company", "contact_person"])
       },
       created_at: {
         allowNull: false,
@@ -41,8 +41,6 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
-
-
 
     await queryInterface.createTable('provinces', {
       id: {
@@ -241,55 +239,17 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
+      present_address: {
+        type: Sequelize.UUID
+      },
+      permanent_address: {
+        type: Sequelize.UUID
+      },
       user_id: {
         type: Sequelize.UUID,
         allowNull: false,
         references: {
           model: 'users',
-          key: 'id'
-        }
-      },
-    });
-
-    await queryInterface.createTable('hometown_addresses', {
-      id: {
-        type: Sequelize.UUID,
-        defaultValue: Sequelize.UUIDV4,
-        primaryKey: true
-      },
-      student_id: {
-        type: Sequelize.STRING(11),
-        references: {
-          model: 'students',
-          key: 'id'
-        }
-      },
-      address_id: {
-        type: Sequelize.UUID,
-        references: {
-          model: 'addresses',
-          key: 'id'
-        }
-      },
-    });
-
-    await queryInterface.createTable('present_addresses', {
-      id: {
-        type: Sequelize.UUID,
-        defaultValue: Sequelize.UUIDV4,
-        primaryKey: true
-      },
-      student_id: {
-        type: Sequelize.STRING(11),
-        references: {
-          model: 'students',
-          key: 'id'
-        }
-      },
-      address_id: {
-        type: Sequelize.UUID,
-        references: {
-          model: 'addresses',
           key: 'id'
         }
       },

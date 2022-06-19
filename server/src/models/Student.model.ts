@@ -27,7 +27,10 @@ module.exports = (sequelize: any, DataTypes: any) => {
     present_gpa!: number;
     image!: string;
     resume_status!: boolean;
+    present_address!: string;
+    permanent_address!: string;
     is_cointernship!: boolean;
+
 
     static associate(models: any) {
       // define association here
@@ -43,8 +46,7 @@ module.exports = (sequelize: any, DataTypes: any) => {
       Student.hasMany(models.Education, {
         onDelete: "cascade",
       });
-      Student.hasOne(models.PresentAddress, { onDelete: 'cascade' });
-      Student.hasOne(models.HometownAddress, { onDelete: 'cascade' });
+
     }
   }
   Student.init(
@@ -140,6 +142,12 @@ module.exports = (sequelize: any, DataTypes: any) => {
       is_cointernship: {
         type: DataTypes.BOOLEAN,
         allowNull: true
+      },
+      present_address: {
+        type: DataTypes.UUID,
+      },
+      permanent_address: {
+        type: DataTypes.UUID
       }
     },
     {

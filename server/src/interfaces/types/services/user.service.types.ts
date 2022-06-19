@@ -20,8 +20,8 @@ export interface IProfileResponse {
 	student?: IStudentAttributes;
 	education?: IEducationAttributes;
 	contactPerson?: IContactPersonAttributes;
-	hometownAddress?: IAddressAttributes;
 	presentAddress?: IAddressAttributes;
+	permanentAddress?: IAddressAttributes;
 	director?: IDirectorAttributes;
 	admin?: IAuthLoginBodyResponse;
 }

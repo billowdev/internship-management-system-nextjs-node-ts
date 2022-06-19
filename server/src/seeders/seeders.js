@@ -18,6 +18,103 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
+     await queryInterface.bulkInsert(
+      'addresses',
+      [    
+        {
+          id: "0437c3b4-38cb-4a63-b852-626b2f255a3b",
+          house_number: "5",
+          road: "2",
+          village: "Apple1",
+          sub_district: "Apple",
+          district: "Banana",
+          province: "Mango",
+          zip_code: "4444",
+          address_type: "permanent",
+          created_at: new Date(),
+          updated_at: new Date(),
+        },
+        {
+          id: "0437c3b4-38cb-4a63-b852-626b2f255a1b",
+          house_number: "1",
+          road: "2",
+          village: "Orange",
+          sub_district: "Apple",
+          district: "Banana",
+          province: "Mango",
+          zip_code: "4444",
+          address_type: "permanent",
+          created_at: new Date(),
+          updated_at: new Date(),
+        },
+        {
+          id: "168a2339-6ead-4cea-8661-681a7ac0fcfd",
+          house_number: "2",
+          road: "2",
+          village: "Orange",
+          sub_district: "Apple",
+          district: "Banana",
+          province: "Mango",
+          zip_code: "4444",
+          address_type: "present",
+          created_at: new Date(),
+          updated_at: new Date(),
+        },
+        {
+          id: "168a2339-6ead-4cea-8661-681a7ac0fcf1",
+          house_number: "8",
+          road: "2",
+          village: "Orange2",
+          sub_district: "Apple2",
+          district: "Banana",
+          province: "Mango",
+          zip_code: "4444",
+          address_type: "present",
+          created_at: new Date(),
+          updated_at: new Date(),
+        },
+        {
+          id: "1d1aa2e8-c842-4266-bbe4-fcaec6430865",
+          house_number: "3",
+          road: "3",
+          village: "Orange",
+          sub_district: "Apple",
+          district: "Banana",
+          province: "Mango",
+          zip_code: "4444",
+          address_type: "company",
+          created_at: new Date(),
+          updated_at: new Date(),
+        },
+        {
+          id: "a6c01b95-a4e3-4514-be98-0ab4abeba943",
+          house_number: "4",
+          road: "4",
+          village: "Orange",
+          sub_district: "Apple",
+          district: "Banana",
+          province: "Mango",
+          zip_code: "4444",
+          address_type: "contact_person",
+          created_at: new Date(),
+          updated_at: new Date(),
+        },
+        {
+          id: "b29cfe50-f6ae-45dc-8057-7d7e33207c9d",
+          house_number: "45",
+          road: "45",
+          village: "Orange contact_person",
+          sub_district: "Apple contact_person",
+          district: "Banana",
+          province: "Mango",
+          zip_code: "4444",
+          address_type: "contact_person",
+          created_at: new Date(),
+          updated_at: new Date(),
+        },   
+      ],
+      {}
+    );
 
     await queryInterface.bulkInsert(
       'users',
@@ -88,6 +185,8 @@ module.exports = {
           image: "string",
           resume_status: true,
           is_cointernship: false,
+          permanent_address:"0437c3b4-38cb-4a63-b852-626b2f255a3b",
+          present_address:"168a2339-6ead-4cea-8661-681a7ac0fcf1",
           created_at: new Date(),
           updated_at: new Date(),
           user_id: "44d00ccd-1d7c-46e0-9bbd-6d63778889ec"
@@ -115,6 +214,8 @@ module.exports = {
           image: "string",
           resume_status: true,
           is_cointernship: true,
+          permanent_address:"0437c3b4-38cb-4a63-b852-626b2f255a1b",
+          present_address:"168a2339-6ead-4cea-8661-681a7ac0fcfd",
           created_at: new Date(),
           updated_at: new Date(),
           user_id: "44d00ccd-1d7c-46e0-9bbd-6d63778882ec"
@@ -203,103 +304,7 @@ module.exports = {
       {}
     );
 
-    await queryInterface.bulkInsert(
-      'addresses',
-      [    
-        {
-          id: "0437c3b4-38cb-4a63-b852-626b2f255a3b",
-          house_number: "5",
-          road: "2",
-          village: "Apple1",
-          sub_district: "Apple",
-          district: "Banana",
-          province: "Mango",
-          zip_code: "4444",
-          address_type: "hometown",
-          created_at: new Date(),
-          updated_at: new Date(),
-        },
-        {
-          id: "0437c3b4-38cb-4a63-b852-626b2f255a1b",
-          house_number: "1",
-          road: "2",
-          village: "Orange",
-          sub_district: "Apple",
-          district: "Banana",
-          province: "Mango",
-          zip_code: "4444",
-          address_type: "hometown",
-          created_at: new Date(),
-          updated_at: new Date(),
-        },
-        {
-          id: "168a2339-6ead-4cea-8661-681a7ac0fcfd",
-          house_number: "2",
-          road: "2",
-          village: "Orange",
-          sub_district: "Apple",
-          district: "Banana",
-          province: "Mango",
-          zip_code: "4444",
-          address_type: "present",
-          created_at: new Date(),
-          updated_at: new Date(),
-        },
-        {
-          id: "168a2339-6ead-4cea-8661-681a7ac0fcf1",
-          house_number: "8",
-          road: "2",
-          village: "Orange2",
-          sub_district: "Apple2",
-          district: "Banana",
-          province: "Mango",
-          zip_code: "4444",
-          address_type: "present",
-          created_at: new Date(),
-          updated_at: new Date(),
-        },
-        {
-          id: "1d1aa2e8-c842-4266-bbe4-fcaec6430865",
-          house_number: "3",
-          road: "3",
-          village: "Orange",
-          sub_district: "Apple",
-          district: "Banana",
-          province: "Mango",
-          zip_code: "4444",
-          address_type: "company",
-          created_at: new Date(),
-          updated_at: new Date(),
-        },
-        {
-          id: "a6c01b95-a4e3-4514-be98-0ab4abeba943",
-          house_number: "4",
-          road: "4",
-          village: "Orange",
-          sub_district: "Apple",
-          district: "Banana",
-          province: "Mango",
-          zip_code: "4444",
-          address_type: "contact_person",
-          created_at: new Date(),
-          updated_at: new Date(),
-        },
-        {
-          id: "b29cfe50-f6ae-45dc-8057-7d7e33207c9d",
-          house_number: "45",
-          road: "45",
-          village: "Orange contact_person",
-          sub_district: "Apple contact_person",
-          district: "Banana",
-          province: "Mango",
-          zip_code: "4444",
-          address_type: "contact_person",
-          created_at: new Date(),
-          updated_at: new Date(),
-        },   
-      ],
-      {}
-    );
+   
 
     await queryInterface.bulkInsert(
       'companies',
@@ -379,38 +384,6 @@ module.exports = {
       {}
     );
 
-    await queryInterface.bulkInsert(
-      'present_addresses',
-      [
-        {
-          id: "0437c3b4-38cb-4a63-b812-626b2f215a1b",
-          student_id: "3",
-          address_id: "168a2339-6ead-4cea-8661-681a7ac0fcfd",
-        },
-        {
-          id: "0437c3b4-18cb-4a23-b852-626b2f255a1b",
-          student_id: "4",
-          address_id: "168a2339-6ead-4cea-8661-681a7ac0fcf1",
-        },
-      ],
-      {}
-    );
-    await queryInterface.bulkInsert(
-      'hometown_addresses',
-      [
-        {
-          id: "0437c3b4-38cb-4a63-b321-626b2f255a1b",
-          student_id: "3",
-          address_id: "0437c3b4-38cb-4a63-b852-626b2f255a1b",
-        },
-        {
-          id: "0437c3b4-38cb-4a63-b852-626b2f211a1b",
-          student_id: "4",
-          address_id: "0437c3b4-38cb-4a63-b852-626b2f255a3b",
-        },
-      ],
-      {}
-    );
   },
 
   async down(queryInterface, Sequelize) {
@@ -430,7 +403,6 @@ module.exports = {
     await queryInterface.bulkDelete('internships', null, bulkDeleteOptions);
     await queryInterface.bulkDelete('co_internships', null, bulkDeleteOptions);
     await queryInterface.bulkDelete('addresses', null, bulkDeleteOptions);
-    await queryInterface.bulkDelete('present_addresses', null, bulkDeleteOptions);
-    await queryInterface.bulkDelete('hometown_addresses', null, bulkDeleteOptions);
+    await queryInterface.bulkDelete('student_addresses', null, bulkDeleteOptions);
   }
 };

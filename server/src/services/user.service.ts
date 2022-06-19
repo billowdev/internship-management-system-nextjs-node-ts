@@ -10,10 +10,9 @@ import { IProfileResponse, IUserServices } from "@/interfaces/types/services/use
 import { IStudentAttributes } from "@/interfaces/types/models/student.model.types";
 import { IEducationAttributes } from "@/interfaces/types/models/education.model.types";
 import { IContactPersonAttributes } from "@/interfaces/types/models/contactPerson.model.types";
-import { IHometownAddressAttributes } from "@/interfaces/types/models/hometownAddress.model.types";
-import { IAddressAttributes } from "@/interfaces/types/models/address.model.types";
 import { IDirectorAttributes } from "@/interfaces/types/models/director.model.types";
 import { IUserAttributes } from "@/interfaces/types/models/user.model.types";
+import { IAddressAttributes } from "@/interfaces/types/models/address.model.types";
 
 const passwordHashing = (password: string): string => {
   const salt = bcrypt.genSaltSync(10);
@@ -67,12 +66,12 @@ const createStudent = async (user_id: string, username: string, roles: string) =
   }))
 
   // hook address table for student
-  await db.Address.create({ address_type: "hometown" }).then((data: any) => {
-    db.HometownAddress.create({ student_id, address_id: data.id })
+  await db.Address.create({ address_type: "permanent" }).then((data: any) => {
+    db.Student.update({ permanent_address: data.id }, { where: { id: student_id } })
   })
 
   await db.Address.create({ address_type: "present" }).then((data: any) => {
-    db.PresentAddress.create({ student_id, address_id: data.id })
+    db.Student.update({ present_address: data.id }, { where: { id: student_id } })
   })
 
   // hook address table for contact_person
@@ -130,22 +129,20 @@ export const studentResume = async (id: string): Promise<IProfileResponse> => {
   const student: IStudentAttributes = await db.Student.findOne({ where: { user_id: id } },)
   // get id from student (response)
   const student_id = student.id;
+
   // education data
   const education: IEducationAttributes = await db.Education.findAll({ where: { student_id } })
   // contact person 
   const contactPerson: IContactPersonAttributes = await db.ContactPerson.findOne({ where: { student_id } })
   // get address by address id from hometown_address table
-  const hometownAddress: IAddressAttributes = await db.HometownAddress.findOne({ where: { student_id } })
-    .then((resp: IHometownAddressAttributes) => {
-      return db.Address.findOne({ where: { id: resp.address_id } })
-    })
+
   // get address by address id from present_address table
-  const presentAddress: IAddressAttributes = await db.PresentAddress.findOne({ where: { student_id } })
-    .then((resp: IHometownAddressAttributes) => {
-      return db.Address.findOne({ where: { id: resp.address_id } })
-    })
-  // combine {student, education, contactPerson, hometownAddress, presentAddress }
-  const resume: IProfileResponse = { student, education, contactPerson, hometownAddress, presentAddress };
+  const presentAddress: IAddressAttributes = await db.Address.findOne({ where: { id: student.present_address, address_type: "present" } })
+  const permanentAddress: IAddressAttributes = await db.Address.findOne({ where: { id: student.permanent_address, address_type: "permanent" } })
+
+
+  // combine {student, education, contactPerson, permanentAddress, presentAddress }
+  const resume: IProfileResponse = { student, education, contactPerson, permanentAddress, presentAddress };
 
   return resume;
 }

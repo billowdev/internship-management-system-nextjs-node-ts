@@ -17,8 +17,6 @@ module.exports = (sequelize: any, DataTypes: any) => {
 
 		static associate(models: any) {
 			// define association here
-			Address.hasOne(models.PresentAddress, { onDelete: 'cascade' })
-			Address.hasOne(models.HometownAddress, { onDelete: 'cascade' })
 			Address.hasOne(models.Company, { onDelete: 'cascade' });
 			Address.hasOne(models.ContactPerson, { onDelete: 'cascade' });
 		}
@@ -52,7 +50,7 @@ module.exports = (sequelize: any, DataTypes: any) => {
 				type: DataTypes.STRING(10),
 			},
 			address_type: {
-				type: DataTypes.ENUM(["hometown", "present", "company", "contact_person"])
+				type: DataTypes.ENUM(["permanent", "present", "company", "contact_person"])
 			}
 		},
 		{
