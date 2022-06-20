@@ -3,7 +3,7 @@ import { sign } from "jsonwebtoken";
 import customError from "../utils/custom-error";
 import { authErrors } from "../errors";
 import config from "../config/config";
-import { IAuthLoginBodyResponse, IAuthRegisterBodyRequest } from "../interfaces/types/handlers/auth.handler.types";
+import { IAuthLoginBodyResponse } from "../interfaces/types/handlers/auth.handler.types";
 // import { getChache, setCache } from "../redis";
 import db from "../models/index";
 import { IProfileResponse, IUserServices } from "../interfaces/types/services/user.service.types";
@@ -79,8 +79,6 @@ const createStudent = async (user_id: string, username: string, roles: string) =
     // hook table contact_person for student
     db.ContactPerson.create({ first_name: "", last_name: "", student_id, address_id: data.id })
   })
-
-
 }
 
 export const createUser = async (
@@ -180,6 +178,8 @@ export const getProfile = async (
     return admin
   }
 };
+
+
 
 export default {
   createUser,

@@ -7,7 +7,6 @@ export const handleUserProfile = async (
 ): Promise<IProfileResponse> => {
   const { UserId } = request;
   const profile: IProfileResponse = await userService.getProfile(UserId!);
-  console.log("========= Debug ----", profile)
   return profile;
 };
 
